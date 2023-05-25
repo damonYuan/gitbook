@@ -1,3 +1,7 @@
 # Table of contents
 
-* [Design Patterns](README.md)
+* [Damon's Blog](README.md)
+
+## 💻 Tech
+
+* [Design Patterns](tech/readme.md)
