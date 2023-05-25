@@ -4,7 +4,8 @@ description: Design Patterns with Java Examples.
 
 # Design Patterns
 
-````
+{% code fullWidth="false" %}
+````markup
 ## Interface Driven Patterns
 
 ### Strategy Pattern / Bridge Pattern
@@ -697,5 +698,6 @@ The Law of Demeter (LoD) or principle of least knowledge is a design guideline f
 
 ![大话设计模式](https://images-cn.ssl-images-amazon.cn/images/I/51xb+7p9wTL._SX258_BO1,204,203,200_.jpg "https://item.jd.com/10079261.html")
 ````
+{% endcode %}
 
 \
