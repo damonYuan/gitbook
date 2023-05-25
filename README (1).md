@@ -4,11 +4,9 @@ description: Design Patterns with Java Examples.
 
 # Design Patterns
 
-{% code fullWidth="false" %}
-````markup
-## Interface Driven Patterns
+### Interface Driven Patterns
 
-### Strategy Pattern / Bridge Pattern
+#### Strategy Pattern / Bridge Pattern
 
 This pattern is one of the incarnation of Dependency Injection.
 
@@ -27,9 +25,9 @@ class StrategyContext {
 
 Strategy can be either interface or abstract class. This pattern helps to hide the implementation details from the method callers, and it's just a simple illustration of interface-oriented programming.
 
-Note StrategyContext doesn't implement Strategy interface. 
+Note StrategyContext doesn't implement Strategy interface.
 
-### Proxy Pattern
+#### Proxy Pattern
 
 ```
 class StrategyProxy implements Strategy {
@@ -49,7 +47,7 @@ This pattern is quite similar to the Strategy Pattern except that here the strat
 
 Note both StrategyProxy and ConcreteStrategy have implement the Strategy interface.
 
-### Decorator Pattern
+#### Decorator Pattern
 
 ```
 class ConcreteComponent implements Component {
@@ -75,7 +73,7 @@ class Decorator implements Component {
 
 This pattern helps to add more functionalities without changing the original target instance.
 
-### Adaptor Pattern
+#### Adaptor Pattern
 
 The implementation of Adaptor Pattern is the same as that of Proxy Pattern while with different goal.
 
@@ -94,13 +92,15 @@ Class BeggerAdaptor implements Worker {
     }
 }
 ```
+
 Note only BeggerAdaptor has implemented the Worker interface.
 
-## Factory Patterns
+### Factory Patterns
 
-### Singleton Pattern
+#### Singleton Pattern
 
 There are multiple implementation methods for Singleton Pattern in Java as listed here - [Java Singleton Design Pattern Best Practices with Examples](https://www.journaldev.com/1377/java-singleton-design-pattern-best-practices-examples). My favorite one is Bill Pugh Singleton Implementation, because it's concise and thread-safe.
+
 ```
 public class BillPughSingleton {
     private BillPughSingleton(){}
@@ -113,7 +113,7 @@ public class BillPughSingleton {
 }
 ```
 
-### Simple Factory Pattern
+#### Simple Factory Pattern
 
 ```
 public class OperationFactory {
@@ -134,7 +134,7 @@ OperationAdd and OperationMinus classes implement Operation interface.
 
 Note that from my perspective of view **Factory Pattern** and **Abstract Factory** Pattern don't provide much value to simplify the program or make the logic clearer, so that I would prefer not to introduce them here.
 
-### Flyweight Pattern
+#### Flyweight Pattern
 
 This pattern is to reduce the cost of resource on recreating instances, one common example is Java String.
 
@@ -161,7 +161,7 @@ In Java the strings with the same value are actually refering to the same underl
 
 Note that in Simple Factory Pattern a new object is always returned, however in FlyWeight Pattern, only when there is no such instance will a new object be created and returned.
 
-### Builder Pattern
+#### Builder Pattern
 
 ```
 Class ContextBuilder {
@@ -204,15 +204,15 @@ public static void main(string[] args) {
 }
 ```
 
-Here we set the options for the builder and finally it will create the instance based on the requirement. 
+Here we set the options for the builder and finally it will create the instance based on the requirement.
 
-### Prototype Pattern
+#### Prototype Pattern
 
 It's just to implement the Cloneable interface in java. Note that if you want to create a immutable class, you should follow [How to create Immutable class in Java?](https://www.geeksforgeeks.org/create-immutable-class-java/) and use deep copy instead of shallow copy.
 
-## Changing Context
+### Changing Context
 
-### Chain of Responsibility Pattern
+#### Chain of Responsibility Pattern
 
 ```
 public interface Handler {
@@ -235,7 +235,7 @@ class AtaskHandler implements Handler {
 }
 ```
 
-And there is another more common pattern which is widely used in servlet, 
+And there is another more common pattern which is widely used in servlet,
 
 ```
 public interface Handler {
@@ -258,7 +258,7 @@ class Processor implements Handler {
 
 In this way the handlers don't have to the successor of itself.
 
-### States Pattern
+#### States Pattern
 
 Please check this awesome article about [Deterministic Finite Automation (DFA)](https://leetcode.com/problems/string-to-integer-atoi/solution/) from Leetcode.
 
@@ -311,9 +311,9 @@ public static void main(String[] args) {
 }
 ```
 
-In this way the business logic for different states is implemented in the related State, and the correlation between different business units is reduced. 
+In this way the business logic for different states is implemented in the related State, and the correlation between different business units is reduced.
 
-### Interpreter Pattern
+#### Interpreter Pattern
 
 ```
 class Context {
@@ -329,7 +329,7 @@ public interface Expression {
 
 Here the concrete `Expression` classes will interpret the context accordingly. This pattern can be used in syntax tree (I don't quite understand this, anyone can give an illustration?).
 
-### Visitor Pattern 
+#### Visitor Pattern
 
 ```
 public interface Visitor {
@@ -375,11 +375,12 @@ public static void main(String[] args) {
     e.accept(v);
 }
 ```
+
 This pattern encapsulates the elements inside an `Entirety` object and allows the `Visitor` instances to visit it's internal elements.
 
-## Others
+### Others
 
-### Template Pattern
+#### Template Pattern
 
 ```
 abstract class AbstractClass {
@@ -394,9 +395,10 @@ public interface Template {
     }
 }
 ```
+
 The target for this pattern is DRY - Don't Repeat Yourself.
 
-### Facade Pattern
+#### Facade Pattern
 
 ```
 class Facade {
@@ -421,10 +423,10 @@ class Facade {
     }
 }
 ```
+
 This pattern is to reduce the complexity of the interface that an external dependent needs to know.
 
-
-### Observer Pattern
+#### Observer Pattern
 
 ```
 class Subject {
@@ -447,9 +449,9 @@ public interface Listener {
 }
 ```
 
-### Memo Pattern
+#### Memo Pattern
 
-This pattern is quite common in frontend application when preparing the data to be submitted to the backend. 
+This pattern is quite common in frontend application when preparing the data to be submitted to the backend.
 
 ```
 class Data {
@@ -489,7 +491,7 @@ public static void main(String[] args) {
 }
 ```
 
-### Composite Pattern
+#### Composite Pattern
 
 Composite Pattern combines objects into a tree structure to represent the "part-whole" hierarchy.
 
@@ -588,7 +590,7 @@ class Node {
 }
 ```
 
-### Iterator Pattern
+#### Iterator Pattern
 
 In Java there are `Iterator<T>` interface and `Iterable<T>` interface. The `Iterable<T>` requires an implementation of `Iterator<T> iterator();` to return an `Iterator<T>` object. The `Iterator<T>` requires the implementation of `boolean hasNext();` and `T next();` methods.
 
@@ -631,7 +633,7 @@ public static void main(String[] args) {
 }
 ```
 
-### Mediator Pattern
+#### Mediator Pattern
 
 ```
 public interface Participant {
@@ -675,29 +677,23 @@ class Person implements Participant {
 
 Here the implementation is one to one, obviously the business case might be many-to-many, and then the logic wrapped inside the mediator would be more complicated.
 
-## Principles
+### Principles
 
-### SRP
+#### SRP
 
 Single Responsibility Principle.
 
-### Open-Close Principle
+#### Open-Close Principle
 
-- Open to extension
-- Closed to modification
+* Open to extension
+* Closed to modification
 
-### Dependency Inversion Principle
+#### Dependency Inversion Principle
 
 Interface-oriented programming.
 
-### LoD Principle
+#### LoD Principle
 
 The Law of Demeter (LoD) or principle of least knowledge is a design guideline for developing software, particularly object-oriented programs.
-
-## Reference
-
-![大话设计模式](https://images-cn.ssl-images-amazon.cn/images/I/51xb+7p9wTL._SX258_BO1,204,203,200_.jpg "https://item.jd.com/10079261.html")
-````
-{% endcode %}
 
 \
