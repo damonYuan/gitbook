@@ -313,6 +313,10 @@ public static void main(String[] args) {
 
 In this way the business logic for different states is implemented in the related State, and the correlation between different business units is reduced.
 
+other implementations：
+- [state patern](https://refactoring.guru/design-patterns/state/java/example)
+- redux
+
 #### Interpreter Pattern
 
 ```
