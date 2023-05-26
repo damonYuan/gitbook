@@ -318,6 +318,8 @@ other implementations：
 * [state patern](https://refactoring.guru/design-patterns/state/java/example)
 * redux
 
+Example for the 3 implementation of State Pattern - [Example](https://github.com/damonYuan/Redux).
+
 **Interpreter Pattern**
 
 ```
