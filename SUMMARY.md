@@ -4,4 +4,4 @@
 
 ## 💻 Tech
 
-* [Design Patterns](<README (1).md>)
+* [Design Patterns](tech/design-patterns.md)
