@@ -9,9 +9,6 @@ description: 随机微积分及其在金融建模中的应用。
 ***
 
 
-
-{% @mermaid/diagram %}
-
 ***
 
 [下载链接](https://pan.baidu.com/s/17U9lB)
