@@ -5,9 +5,6 @@ date: 2020-09-10 15:04:23
 
 # MVCC in Database
 
-> * Author: [Damon Yuan](https://www.damonyuan.com)
-> * Date: 2020-09-10
-
 Most of MySQL’s transactional storage engines don’t use a simple row-locking mechanism. Instead, they use row-level locking in conjunction with a technique for increasing concurrency known as multiversion concurrency control (MVCC). 
 
 
