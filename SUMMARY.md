@@ -9,7 +9,7 @@
 * [Design Patterns](tech/design-patterns.md)
 * [Tools for Reliability](tech/tools-for-reliability.md)
 * [MVCC in Database](tech/mvcc.md)
-* [The difference between 127.0.0.1 and 0.0.0.0](tech/difference-between-two-ips.md)
+* [The Difference between 127.0.0.1 and 0.0.0.0](tech/difference-between-two-ips.md)
 
 ## ➗ Math
 
