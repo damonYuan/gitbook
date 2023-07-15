@@ -9,6 +9,8 @@
 * [210718 - Design Patterns](tech/design-patterns.md)
 * [201007 - Tools for Reliability](tech/tools-for-reliability.md)
 * [200910 - MVCC in Database](tech/mvcc.md)
+* [200212 - Two Microservice Tech Stacks: Netflix vs K8S + Istio](tech/two-ms-tech-stacks.md)
+* [191001 - The difference between 127.0.0.1 and 0.0.0.0](tech/difference-between-two-ips.md)
 
 ## ➗ Math
 
