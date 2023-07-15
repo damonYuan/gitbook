@@ -1,5 +1,5 @@
 ---
-description: 211225 - 功能需求模版 FRD Template
+description: 功能需求模版 FRD Template
 ---
 # 功能需求模版 FRD Template
 

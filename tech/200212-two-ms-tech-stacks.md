@@ -1,5 +1,5 @@
 ---
-description: 200212 - Two Microservice Tech Stacks: Netflix vs K8S + Istio
+description: Two Microservice Tech Stacks: Netflix vs K8S + Istio
 ---
 # Two Microservice Tech Stacks
 

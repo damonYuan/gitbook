@@ -1,5 +1,5 @@
 ---
-description: 201007 - Tools for Reliability
+description: Tools for Reliability
 ---
 # Tools for Reliability
 

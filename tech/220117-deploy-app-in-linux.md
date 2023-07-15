@@ -1,5 +1,5 @@
 ---
-description: 220117 - 如何正确地在 Linux 中部署应用。
+description: 如何正确地在 Linux 中部署应用。
 ---
 # 如何正确地在 Linux 中部署应用
 
