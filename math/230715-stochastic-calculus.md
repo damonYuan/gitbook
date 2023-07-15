@@ -8,6 +8,13 @@ description: 随机微积分及其在金融建模中的应用。
 
 ***
 
+```mermaid
+mindmap
+  root((mindmap))
+    C1: 
+BASIC CONCEPTS FROM PROBABILITY THEORY
+ 
+```
 
 ***
 

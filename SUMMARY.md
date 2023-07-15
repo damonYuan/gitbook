@@ -15,6 +15,6 @@
 
 * [Elementary Stochastic Calculus with Finance in View](math/230715-stochastic-calculus.md)
 
-## 📖 Product
+## 📘 Product
 
 * [功能需求模版 FRD Template](product/211225-frd-template.md)
