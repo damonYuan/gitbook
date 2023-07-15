@@ -2,6 +2,10 @@
 
 * [Damon's Blog](README.md)
 
+## ➗Tech
+
+* [Elementary Stochastic Calculus with Finance in View](math/stochastic-calculus.md)
+
 ## 💻 Tech
 
 * [Design Patterns](tech/design-patterns.md)
