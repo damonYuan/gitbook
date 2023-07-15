@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Damon's Blog](README.md)
+* [👿 Damon's Blog](README.md)
 
 ## 💻 Tech
 
