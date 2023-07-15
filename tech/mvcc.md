@@ -1,6 +1,5 @@
 ---
 description: MVCC in Database
-date: 2020-09-10 15:04:23
 ---
 
 # MVCC in Database
