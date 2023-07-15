@@ -1,7 +1,7 @@
 ---
 description: 191001 - The difference between 127.0.0.1 and 0.0.0.0
 ---
-# The difference between 127.0.0.1 and 0.0.0.0
+# The Difference between 127.0.0.1 and 0.0.0.0
 
 When using tomcat, the tomcat will be bound to the address of 127.0.0.1 by default. While in node.js the bound address is 0.0.0.0. So what is the difference between these two IP addresses?
 
