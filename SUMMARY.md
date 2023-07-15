@@ -2,6 +2,10 @@
 
 * [Damon's Blog](README.md)
 
+## 📘 Product
+
+* [功能需求模版 FRD Template](product/frd-template.md)
+
 ## 💻 Tech
 
 * [Design Patterns](tech/design-patterns.md)
