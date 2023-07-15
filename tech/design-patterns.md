@@ -1,5 +1,5 @@
 ---
-description: Design Patterns with Java Examples.
+description: 210718 - Design Patterns with Java Examples.
 ---
 
 # Design Patterns

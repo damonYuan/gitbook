@@ -1,5 +1,5 @@
 ---
-description: 对典型的领域驱动设计 (Domain Driven Design) 应用架构的理解和使用经验的总结。
+description: 220501 - 对典型的领域驱动设计 (Domain Driven Design) 应用架构的理解和使用经验的总结。
 ---
 
 # 典型的领域驱动设计应用架构
