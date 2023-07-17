@@ -1,5 +1,5 @@
 ---
-description: Learning CPP with Java background and practice with a project
+description: Learning C++ with Java background and practice through building a Redis
 ---
 # C++ for Java Programmers
 
