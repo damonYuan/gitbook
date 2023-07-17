@@ -12,20 +12,20 @@ description: Learning CPP with Java background and practice with a project
 ```mermaid
 mindmap
   root((mindmap))
-    C0：Introduction
-    C1：Basic Types and Control Structures
-    C2：Functions, Arrays, Strings, and Parameter Passing
-    C3：Pointers and Reference Variables
-    C4：Object-based Programming: Classes
-    C5：Operator Overloading
-    C6：Object-Oriented Programming: Inheritance
-    C7: Templates
-    C8: Abnormal Control Flow
-    C9: Input and Output
-    C10: Collections: The Standard Template Library
-    C11: Primitive Arrays and Strings
-    C12: C-Style C++
-    C13: Using java and C++: the JNI
+    C0#58; Introduction
+    C1#58; Basic Types and Control Structures
+    C2#58; Functions, Arrays, Strings, and Parameter Passing
+    C3#58; Pointers and Reference Variables
+    C4#58; Object#8211;based Programming#58; Classes
+    C5#58; Operator Overloading
+    C6#58; Object#8211;Oriented Programming#58;  Inheritance
+    C7#58; Templates
+    C8#58; Abnormal Control Flow
+    C9#58; Input and Output
+    C10#58; Collections#58; The Standard Template Library
+    C11#58; Primitive Arrays and Strings
+    C12#58; C-Style C++
+    C13#58; Using java and C++#58; the JNI
  
 ```
 
