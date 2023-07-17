@@ -13,6 +13,10 @@ mindmap
   root((思维导图))
     第一章：准备知识 
       1.1 概率论基本概念
+        1.1.1 Random Variable
+            outcomes #969;
+            outcome space #937;
+            events#58; the subsets of &#937
       1.2 随机过程
     第二章：离散积分
     第三章：离散微分
