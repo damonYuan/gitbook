@@ -16,7 +16,7 @@ mindmap
         1.1.1 Random Variable
             outcomes #969;
             outcome space #937;
-            events#58; the subsets of &#937
+            events#58; the subsets of #937
       1.2 随机过程
     第二章：离散积分
     第三章：离散微分
