@@ -14,11 +14,14 @@ mindmap
     第一章：准备知识 
       1.1 概率论基本概念
         1.1.1 Random Variable
-            id1111["`ω: outcomes`"]
-            id1112["`Ω: outcome space`"]
-            id1113["`Event: the subsets of Ω`"]
-            id1114["`𝑭: σ-field / σ-algebra`"]
-            id1115["`X = X(ω): random variable X`"]
+            id111["`
+              ω: outcomes
+              Ω: outcome space
+              Event: the subsets of Ω
+              𝑭: σ-field / σ-algebra
+              X = X(ω): random variable X
+              Borel sets
+            `"]
       1.2 随机过程
     第二章：离散积分
     第三章：离散微分
