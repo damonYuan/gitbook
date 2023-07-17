@@ -4,6 +4,7 @@
 
 ## 💻 Tech
 
+* [C++ for Java Programmers](tech/230717-cpp-for-java-programmers.md)
 * [典型的领域驱动设计应用架构](tech/220501-ddd-architecture.md)
 * [如何正确地在 Linux 中部署应用](tech/220117-deploy-app-in-linux.md)
 * [Design Patterns](tech/210718-design-patterns.md)
