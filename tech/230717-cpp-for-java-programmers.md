@@ -24,7 +24,7 @@ mindmap
     C9#58; Input and Output
     C10#58; Collections#58; The Standard Template Library
     C11#58; Primitive Arrays and Strings
-    C12#58; C-Style C++
+    C12#58; C#8211;Style C++
     C13#58; Using java and C++#58; the JNI
  
 ```
