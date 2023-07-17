@@ -9,7 +9,8 @@
 * [Design Patterns](tech/210718-design-patterns.md)
 * [Tools for Reliability](tech/201007-tools-for-reliability.md)
 * [MVCC in Database](tech/200910-mvcc.md)
-* [The Difference between 127.0.0.1 and 0.0.0.0](tech/210718-difference-between-two-ips.md)
+* [Two Microservice Tech Stacks](tech/200212-two-ms-tech-stacks.md)
+* [The Difference between 127.0.0.1 and 0.0.0.0](tech/191001-difference-between-two-ips.md)
 
 ## ➗ Math
 
