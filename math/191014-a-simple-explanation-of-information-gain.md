@@ -79,19 +79,27 @@ Let's calculate the Information Gain of our entire dataset.
 
 1. Calculate the Entropy of the whole dataset
 
-   $$\begin{aligned} H(S) &= -\sum_{x_i\in X, i = 1}^2p(x_i)log_2p(x_i) \\
-  &= -p(blue)log_2p(blue) - p(green)log_2p(green) \\
-  &= -{5\over10} \times log_2{5\over10} - {5\over10} \times log_2{5\over10} \\
-  &= -{1\over2} \times log_2{2^{-1}} - {1\over2} \times log_2{2^{-1}} \\
-  &= 1 \end{aligned} $$
+   $$
+       \begin{aligned} 
+       H(S) &= -\sum_{x_i\in X, i = 1}^2p(x_i)log_2p(x_i) \\
+        &= -p(blue)log_2p(blue) - p(green)log_2p(green) \\
+        &= -{5\over10} \times log_2{5\over10} - {5\over10} \times log_2{5\over10} \\
+        &= -{1\over2} \times log_2{2^{-1}} - {1\over2} \times log_2{2^{-1}} \\
+        &= 1 
+       \end{aligned} 
+  $$
 
 2. Calculate the Information Gain based on the definition
 
    Note that here is only one branch in the whole dataset, which leads to the result 
 
-   $$\begin{aligned} IG(S, A) &= H(S) - \sum_{t\in T}p(t)H(t) \\
-  &= H(S) - H(S) \\
-  &= 0 \end{aligned} $$
+   $$
+       \begin{aligned} 
+       IG(S, A) &= H(S) - \sum_{t\in T}p(t)H(t) \\
+       &= H(S) - H(S) \\
+       &= 0 
+       \end{aligned} 
+   $$
 
 ### Example 2: A Perfect Split
 
@@ -110,27 +118,33 @@ Let's calculate the Information Gain of this split,
 
    * Left branch
    
-     $$\begin{aligned} H(S_l) &= -\sum_{x_i\in X, i = 1}^2p(x_i)log_2p(x_i) \\
+     $$
+     \begin{aligned} H(S_l) &= -\sum_{x_i\in X, i = 1}^2p(x_i)log_2p(x_i) \\
   &= -p(blue)log_2p(blue) - p(green)log_2p(green) \\
   &= -{5\over5} \times log_2{5\over5} - {0\over5} \times log_2{0\over5} \\
   &= -1 \times log_2{2^0} - 0 \times log_2{0} \\
-  &= 0 \end{aligned} $$
+  &= 0 \end{aligned} 
+     $$
   
    * Right branch
    
-     $$\begin{aligned} H(S_r) &= -\sum_{x_i\in X, i = 1}^2p(x_i)log_2p(x_i) \\
+     $$
+   \begin{aligned} H(S_r) &= -\sum_{x_i\in X, i = 1}^2p(x_i)log_2p(x_i) \\
   &= -p(blue)log_2p(blue) - p(green)log_2p(green) \\
   &= -{0\over5} \times log_2{0\over5} - {5\over5} \times log_2{5\over5} \\
   &= -0 \times log_2{0} - 1 \times log_2{2^0} \\
-  &= 0 \end{aligned} $$
+  &= 0 \end{aligned} 
+    $$
   
 2. Calculate the Information Gain for this split
 
-   $$\begin{aligned} IG(S, A) &= H(S) - \sum_{t\in T}p(t)H(t) \\
+   $$
+\begin{aligned} IG(S, A) &= H(S) - \sum_{t\in T}p(t)H(t) \\
   &= H(S) - H(S|x) \\
   &= H(S) - p(S_l)H(S_l) - p(S_r)H(S_r) \\
   &= 1 - {5\over10}\times0 - {5\over10}\times0 \\
-  &= 1 \end{aligned} $$
+  &= 1 \end{aligned} 
+   $$
   
   The Information Gain is 1 and it is larger than 0 from Example 1.
    
@@ -151,18 +165,22 @@ Let's calculate the Information Gain of this split,
 
    * Left branch 
    
-     $$\begin{aligned} H(S_l) &= -\sum_{x_i\in X, i = 1}^2p(x_i)log_2p(x_i) \\
+     $$
+     \begin{aligned} H(S_l) &= -\sum_{x_i\in X, i = 1}^2p(x_i)log_2p(x_i) \\
   &= -p(blue)log_2p(blue) - p(green)log_2p(green) \\
   &= -{4\over4} \times log_2{4\over4} - {0\over4} \times log_2{0\over4} \\
   &= -1 \times log_2{2^0} - 0 \times log_2{0} \\
-  &= 0 \end{aligned} $$
+  &= 0 \end{aligned} 
+     $$
   
    * Right branch
      
-     $$\begin{aligned} H(S_r) &= -\sum_{x_i\in X, i = 1}^2p(x_i)log_2p(x_i) \\
+     $$
+     \begin{aligned} H(S_r) &= -\sum_{x_i\in X, i = 1}^2p(x_i)log_2p(x_i) \\
   &= -p(blue)log_2p(blue) - p(green)log_2p(green) \\
   &= -{1\over6} \times log_2{1\over6} - {5\over6} \times log_2{5\over6} \\
-  &= 0.6500224216483541 \end{aligned} $$
+  &= 0.6500224216483541 \end{aligned} 
+     $$
   
      Using python to calculate, the code is as follows
      
@@ -174,11 +192,13 @@ Let's calculate the Information Gain of this split,
      ```
 2. Calculate the Information Gain for this split
 
-   $$\begin{aligned} IG(S, A) &= H(S) - \sum_{t\in T}p(t)H(t) \\
+   $$ 
+   \begin{aligned} IG(S, A) &= H(S) - \sum_{t\in T}p(t)H(t) \\
   &= H(S) - H(S|x) \\
   &= H(S) - p(S_l)H(S_l) - p(S_r)H(S_r) \\
   &= 1 - {4\over10}\times0 - {6\over10}\times0.6500224216483541 \\
-  &= 0.6099865470109875 \end{aligned} $$
+  &= 0.6099865470109875 \end{aligned} 
+   $$
      
    The result is smaller than the 1 from Example 2, so we are sure that it is not the best option to split the dataset.
 
