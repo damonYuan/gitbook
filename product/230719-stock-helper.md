@@ -29,12 +29,13 @@ description: A helper for stock investors.
 
 #### E1S1: Create a Basket of Selected Stocks
 
-1. tickers
+1. Input: tickers
 
 #### E1S2: Prepare the Market Data
 
 1. OHLCV of the tickers
 2. Rf
+3. Input: duration to look back
 
 #### E1S3: Calculate the SMB of the Basket
 
