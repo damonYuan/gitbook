@@ -18,12 +18,12 @@ $$
   IG(S, A) = H(S) - \sum_{t\in T}p(t)H(t) = H(S) - H(S|A)
 $$  
 
-  Where,
+Where,
 
-  * H(S) – Entropy of set S
-  * T - The subsets created from splitting set S by attribute A, such that $$S = \bigcup_{t\in T}t$$ 
-  * p(t) - The proportion of the number of elements in t to the number of elements in set S
-  * H(t) - Entropy of subset t
+* H(S) – Entropy of set S
+* T - The subsets created from splitting set S by attribute A, such that $$S = \bigcup_{t\in T}t$$ 
+* p(t) - The proportion of the number of elements in t to the number of elements in set S
+* H(t) - Entropy of subset t
 
 When we know how to calculate the Information Gain, we can split our data across every feature of the classes to see which split gives us the highest Information Gain. The split with the highest Information Gain is our best option.
 
@@ -35,13 +35,13 @@ $$
 H(S) = -\sum_{x_i\in X, i = 1}^Np(x_i)log_2p(x_i)
 $$
 
-  Where,
+Where,
 
-  * S - The current dataset for which Entropy is being calculated
-  * X - The set of classes in S 
-  * $$ p(x) $$ - the proportion of the number of elements in class x to the number of elements in Set S 
-  * $$ log_2p(x) $$ - the information for class x
-  * N is the number of classes
+* S - The current dataset for which Entropy is being calculated
+* X - The set of classes in S 
+* $$ p(x) $$ - the proportion of the number of elements in class x to the number of elements in Set S 
+* $$ log_2p(x) $$ - the information for class x
+* N is the number of classes
   
 After the formula of Entropy is defined, we can start to calculate the Information Gain for some simple examples.   
 
@@ -79,27 +79,27 @@ Let's calculate the Information Gain of our entire dataset.
 
 1. Calculate the Entropy of the whole dataset
 
-   $$
-       \begin{aligned} 
-       H(S) &= -\sum_{x_i\in X, i = 1}^2p(x_i)log_2p(x_i) \\
-        &= -p(blue)log_2p(blue) - p(green)log_2p(green) \\
-        &= -{5\over10} \times log_2{5\over10} - {5\over10} \times log_2{5\over10} \\
-        &= -{1\over2} \times log_2{2^{-1}} - {1\over2} \times log_2{2^{-1}} \\
-        &= 1 
-       \end{aligned} 
-  $$
+$$
+\begin{aligned} 
+H(S) &= -\sum_{x_i\in X, i = 1}^2p(x_i)log_2p(x_i) \\
+&= -p(blue)log_2p(blue) - p(green)log_2p(green) \\
+&= -{5\over10} \times log_2{5\over10} - {5\over10} \times log_2{5\over10} \\
+&= -{1\over2} \times log_2{2^{-1}} - {1\over2} \times log_2{2^{-1}} \\
+&= 1 
+\end{aligned} 
+$$
 
 2. Calculate the Information Gain based on the definition
 
-   Note that here is only one branch in the whole dataset, which leads to the result 
+Note that here is only one branch in the whole dataset, which leads to the result 
 
-   $$
-       \begin{aligned} 
-       IG(S, A) &= H(S) - \sum_{t\in T}p(t)H(t) \\
-       &= H(S) - H(S) \\
-       &= 0 
-       \end{aligned} 
-   $$
+$$
+\begin{aligned} 
+IG(S, A) &= H(S) - \sum_{t\in T}p(t)H(t) \\
+&= H(S) - H(S) \\
+&= 0 
+\end{aligned} 
+$$
 
 ### Example 2: A Perfect Split
 
@@ -116,37 +116,37 @@ Let's calculate the Information Gain of this split,
 
 1. Calculate the Entropy of the two branches  
 
-   * Left branch
+* Left branch
    
-     $$
-     \begin{aligned} H(S_l) &= -\sum_{x_i\in X, i = 1}^2p(x_i)log_2p(x_i) \\
-  &= -p(blue)log_2p(blue) - p(green)log_2p(green) \\
-  &= -{5\over5} \times log_2{5\over5} - {0\over5} \times log_2{0\over5} \\
-  &= -1 \times log_2{2^0} - 0 \times log_2{0} \\
-  &= 0 \end{aligned} 
-     $$
+$$
+\begin{aligned} H(S_l) &= -\sum_{x_i\in X, i = 1}^2p(x_i)log_2p(x_i) \\
+&= -p(blue)log_2p(blue) - p(green)log_2p(green) \\
+&= -{5\over5} \times log_2{5\over5} - {0\over5} \times log_2{0\over5} \\
+&= -1 \times log_2{2^0} - 0 \times log_2{0} \\
+&= 0 \end{aligned} 
+$$
   
-   * Right branch
+* Right branch
    
-     $$
-   \begin{aligned} H(S_r) &= -\sum_{x_i\in X, i = 1}^2p(x_i)log_2p(x_i) \\
-  &= -p(blue)log_2p(blue) - p(green)log_2p(green) \\
-  &= -{0\over5} \times log_2{0\over5} - {5\over5} \times log_2{5\over5} \\
-  &= -0 \times log_2{0} - 1 \times log_2{2^0} \\
-  &= 0 \end{aligned} 
-    $$
+$$
+\begin{aligned} H(S_r) &= -\sum_{x_i\in X, i = 1}^2p(x_i)log_2p(x_i) \\
+&= -p(blue)log_2p(blue) - p(green)log_2p(green) \\
+&= -{0\over5} \times log_2{0\over5} - {5\over5} \times log_2{5\over5} \\
+&= -0 \times log_2{0} - 1 \times log_2{2^0} \\
+&= 0 \end{aligned} 
+$$
   
 2. Calculate the Information Gain for this split
 
-   $$
+$$
 \begin{aligned} IG(S, A) &= H(S) - \sum_{t\in T}p(t)H(t) \\
-  &= H(S) - H(S|x) \\
-  &= H(S) - p(S_l)H(S_l) - p(S_r)H(S_r) \\
-  &= 1 - {5\over10}\times0 - {5\over10}\times0 \\
-  &= 1 \end{aligned} 
-   $$
+&= H(S) - H(S|x) \\
+&= H(S) - p(S_l)H(S_l) - p(S_r)H(S_r) \\
+&= 1 - {5\over10}\times0 - {5\over10}\times0 \\
+&= 1 \end{aligned} 
+$$
   
-  The Information Gain is 1 and it is larger than 0 from Example 1.
+The Information Gain is 1 and it is larger than 0 from Example 1.
    
 ### Example 3: An Imperfect Split
 
@@ -163,44 +163,44 @@ Let's calculate the Information Gain of this split,
 
 1. Calculate the Entropy of the two branches  
 
-   * Left branch 
+* Left branch 
    
-     $$
-     \begin{aligned} H(S_l) &= -\sum_{x_i\in X, i = 1}^2p(x_i)log_2p(x_i) \\
-  &= -p(blue)log_2p(blue) - p(green)log_2p(green) \\
-  &= -{4\over4} \times log_2{4\over4} - {0\over4} \times log_2{0\over4} \\
-  &= -1 \times log_2{2^0} - 0 \times log_2{0} \\
-  &= 0 \end{aligned} 
-     $$
+$$
+\begin{aligned} H(S_l) &= -\sum_{x_i\in X, i = 1}^2p(x_i)log_2p(x_i) \\
+&= -p(blue)log_2p(blue) - p(green)log_2p(green) \\
+&= -{4\over4} \times log_2{4\over4} - {0\over4} \times log_2{0\over4} \\
+&= -1 \times log_2{2^0} - 0 \times log_2{0} \\
+&= 0 \end{aligned} 
+$$
   
-   * Right branch
+* Right branch
      
-     $$
-     \begin{aligned} H(S_r) &= -\sum_{x_i\in X, i = 1}^2p(x_i)log_2p(x_i) \\
-  &= -p(blue)log_2p(blue) - p(green)log_2p(green) \\
-  &= -{1\over6} \times log_2{1\over6} - {5\over6} \times log_2{5\over6} \\
-  &= 0.6500224216483541 \end{aligned} 
-     $$
+$$
+\begin{aligned} H(S_r) &= -\sum_{x_i\in X, i = 1}^2p(x_i)log_2p(x_i) \\
+&= -p(blue)log_2p(blue) - p(green)log_2p(green) \\
+&= -{1\over6} \times log_2{1\over6} - {5\over6} \times log_2{5\over6} \\
+&= 0.6500224216483541 \end{aligned} 
+$$
   
-     Using python to calculate, the code is as follows
+Using python to calculate, the code is as follows
      
-     ```
-     # Python 3.7
-     from math import log
-     result =  -(1.0/6)*log(1.0/6, 2) - (5.0/6)*log(5.0/6, 2)
-     print(result)
-     ```
+```
+# Python 3.7
+from math import log
+result =  -(1.0/6)*log(1.0/6, 2) - (5.0/6)*log(5.0/6, 2)
+print(result)
+```
 2. Calculate the Information Gain for this split
 
-   $$ 
-   \begin{aligned} IG(S, A) &= H(S) - \sum_{t\in T}p(t)H(t) \\
-  &= H(S) - H(S|x) \\
-  &= H(S) - p(S_l)H(S_l) - p(S_r)H(S_r) \\
-  &= 1 - {4\over10}\times0 - {6\over10}\times0.6500224216483541 \\
-  &= 0.6099865470109875 \end{aligned} 
-   $$
+$$ 
+\begin{aligned} IG(S, A) &= H(S) - \sum_{t\in T}p(t)H(t) \\
+&= H(S) - H(S|x) \\
+&= H(S) - p(S_l)H(S_l) - p(S_r)H(S_r) \\
+&= 1 - {4\over10}\times0 - {6\over10}\times0.6500224216483541 \\
+&= 0.6099865470109875 \end{aligned} 
+$$
      
-   The result is smaller than the 1 from Example 2, so we are sure that it is not the best option to split the dataset.
+The result is smaller than the 1 from Example 2, so we are sure that it is not the best option to split the dataset.
 
 ## Recap
 
