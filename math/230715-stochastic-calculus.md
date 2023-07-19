@@ -14,14 +14,7 @@ mindmap
     第一章：准备知识 
       1.1 概率论基本概念
         1.1.1 Random Variable
-            id111["`
-              ω: outcomes
-              Ω: outcome space
-              Event: the subsets of Ω
-              𝑭: σ-field / σ-algebra
-              X = X(ω): random variable X
-              Borel sets
-            `"]
+        1.1.2 Random Vectors    
       1.2 随机过程
     第二章：离散积分
     第三章：离散微分
@@ -29,6 +22,17 @@ mindmap
     附录
  
 ```
+
+| Node  | Term              | Note                                                       |
+|-------|-------------------|------------------------------------------------------------|
+| 1.1.1 | ω                 | outcomes                                                   |
+| 1.1.1 | Ω                 | outcome space                                              |
+| 1.1.1 | Event             | the subsets of Ω, e.g., {ω: X(ω) ∈ B}                      |
+| 1.1.1 | 𝑭                | σ-field / σ-algebra                                        |
+| 1.1.1 | X = X(ω)          | random variable X                                          |
+| 1.1.1 | Borel sets        | subsets B of R                                             |
+| 1.1.2 | random structures | finite-dimensional and infinite dimensional random vectors |
+
 
 ***
 
