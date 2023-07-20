@@ -25,8 +25,6 @@ description: A helper for stock investors.
 
 ### Epic 1: Fama-French 3-Factor Model on a Basket of Stocks
 
-[Fama-French三因子模型最深剖析](https://www.bilibili.com/video/BV11Y411x7jy/?spm_id_from=333.999.0.0&vd_source=3caf1cf2eb94db028e6f5b496be93bc8)
-
 #### E1S1: Create a Basket of Selected Stocks
 
 1. Input: tickers
@@ -63,3 +61,7 @@ Note that calculating the SMB factor for a single stock is not a commonly used a
 
 #### E1S9: GRS test
 
+# Reference
+
+1. [多因子选股(股票)](https://www.myquant.cn/docs/python_strategyies/103)
+2. [Fama-French三因子模型最深剖析](https://www.bilibili.com/video/BV11Y411x7jy/?spm_id_from=333.999.0.0&vd_source=3caf1cf2eb94db028e6f5b496be93bc8)
