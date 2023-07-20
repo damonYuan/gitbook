@@ -4,8 +4,6 @@ description: 对典型的领域驱动设计 (Domain Driven Design) 应用架构�
 
 # 典型的领域驱动设计应用架构
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
-
 只有有了好的应用架构，应用才能有拓展性，才能方便其他开发人员投入到这个项目的开发和维护，这个项目才能拥有足够的活力。
 
 ### 领域模型的项目结构
