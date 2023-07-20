@@ -1,51 +1,46 @@
----
-description: A helper for stock investors.
----
+FRD: Fama-French 3 Factor Model
+====
 
-# Stock Helper
+# Functional Requirements
 
-## Functional Requirements
+## Stock Selection
 
-### Stock Selection
-
-1. Fama-French based on some Indexes or Fund
-
-### Portfolio Construction
+## Portfolio Construction
 
 1. MPT
 2. Kelly's Formula
 
-### Risk Management
+## Risk Management
 
-### Hedging
+## Hedging Advices
 
-## Non-functional Requirements
+# Non-functional Requirements
 
-## Stories
+# Stories
 
-### Epic 1: Fama-French 3-Factor Model on a Basket of Stocks
+## Epic 1: Fama-French 3-Factor Model on a Basket of Stocks
 
-#### E1S1: Create a Basket of Selected Stocks
+### E1S1: Create a Basket of Selected Stocks
 
 1. Input: tickers
 
-#### E1S2: Prepare the Market Data
+### E1S2: Prepare the Market Data
 
 1. OHLCV of the tickers
 2. Rf
 3. Input: duration to look back
 
-#### E1S3: Calculate the SMB of the Basket
+### E1S3: Calculate the SMB of the Basket
 
-#### E1S4: Calculate the HML of the Basket
+### E1S4: Calculate the HML of the Basket
 
-#### E1S5: Calculate the Return of the Basket
+### E1S5: Calculate the Return of the Basket
 
-#### E1S6: Sort the Stocks based on Alpha
+### E1S6: Sort the Stocks based on Alpha
 
-#### E1S7: Options of the Combination
+### E1S7: Options of the Combination
 
-#### E1S8: GRS test
+### E1S8: GRS test
 
 # Reference
 
