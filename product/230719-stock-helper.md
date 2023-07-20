@@ -23,7 +23,7 @@ description: A helper for stock investors.
 
 ## Stories
 
-### Epic 1: Fama-French 3 Factor Model on a Basket of Stocks
+### Epic 1: Fama-French 3-Factor Model on a Basket of Stocks
 
 [Fama-French三因子模型最深剖析](https://www.bilibili.com/video/BV11Y411x7jy/?spm_id_from=333.999.0.0&vd_source=3caf1cf2eb94db028e6f5b496be93bc8)
 
