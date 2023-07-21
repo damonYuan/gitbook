@@ -21,7 +21,7 @@ $$
 \end{aligned} 
 $$
 
-(actually, $$E\left [  X^{2n}\right ] = (2n - 1)!!\sigma^{2n}$$)
+(actually, $$E\left [  X^{2n}\right ] = (2n - 1)!!\sigma^{2n}$$, $$!!$$ is the [double factorial](https://en.wiktionary.org/wiki/double_factorial#:~:text=double%20factorial%20(plural%20double%20factorials,double%20exclamation%20mark%20(!!).))
 
 thus 
 
