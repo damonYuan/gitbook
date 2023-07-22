@@ -13,6 +13,7 @@ description: Learning C++ with Java background and practice through building a R
 mindmap
   root((mindmap))
     C0#58; Introduction
+      High Level Difference
     C1#58; Basic Types and Control Structures
     C2#58; Functions, Arrays, Strings, and Parameter Passing
     C3#58; Pointers and Reference Variables
@@ -28,6 +29,24 @@ mindmap
     C13#58; Using java and C++#58; the JNI
  
 ```
+
+***
+
+![](https://raw.githubusercontent.com/changkun/modern-cpp-tutorial/master/assets/cover-2nd-en.png)
+
+[READ ONLINE](https://changkun.de/modern-cpp/en-us/00-preface/)
+
+```mermaid
+mindmap
+  root((mindmap))
+    Preface
+    id1["`C1: Towards Modern C++`"]
+      id11["`clang++ and -std=c++2a`"]
+      id12["`extern keyword`"]
+    id2["`C2: Language Usability Enhancements`"]  
+      
+  
+```  
 
 ***
 
