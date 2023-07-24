@@ -32,6 +32,23 @@ FRD: Fama-French 3 Factor Model
 2. Rf
 3. Input: duration to look back
 
+```mermaid
+---
+title: Animal example
+---
+classDiagram
+    note "From Duck till Zebra"
+    class Bar {
+        + Long ts
+        + String symbol
+        + double open
+        + double high
+        + double low
+        + double close
+        + double volumn
+    }
+```
+
 ### E1S3: Calculate the SMB of the Basket
 
 ### E1S4: Calculate the HML of the Basket
