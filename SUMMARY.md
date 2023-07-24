@@ -21,6 +21,3 @@
 * [Elementary Stochastic Calculus with Finance in View](math/230715-stochastic-calculus.md)
 * [A Simple Explanation of Information Gain](math/191014-a-simple-explanation-of-information-gain.md)
 
-## 📘 Product
-
-* [功能需求模版 FRD Template](product/211225-frd-template.md)
