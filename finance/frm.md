@@ -1,9 +1,8 @@
-FRM
-===
+# FRM
 
-# FRM I
+## FRM I
 
-## Book 1: Foundations of Risk Management
+### Book 1: Foundations of Risk Management
 
 ```mermaid
 mindmap
@@ -13,7 +12,7 @@ mindmap
     id_r3["`STUDY SESSION 3: Case Studies and Code of Conduct`"]
 ```
 
-## Book 2: Quantitative Analysis
+### Book 2: Quantitative Analysis
 
 ```mermaid
 mindmap
@@ -24,7 +23,7 @@ mindmap
     id_r7["`STUDY SESSION 7: FORECASTING, CORRELATION, AND SIMULATION`"]
 ```
 
-## Book 3: Financial Markets and Products
+### Book 3: Financial Markets and Products
 
 ```mermaid
 mindmap
@@ -35,7 +34,7 @@ mindmap
     id_r11["`STUDY SESSION 11: Interest Rates, Fixed Income Securities, and Swaps`"]
 ```    
     
-## Book 4: Valuation and Risk Models
+### Book 4: Valuation and Risk Models
 
 ```mermaid
 mindmap
@@ -46,3 +45,5 @@ mindmap
     id_r15["`STUDY SESSION 15: Option Valuation`"]
 
 ```
+
+## FRM II
