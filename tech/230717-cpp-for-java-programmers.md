@@ -67,4 +67,16 @@ mindmap
 
 [Build Your Own Redis with C/C++](https://build-your-own.org/redis/)
 
+```mermaid
+mindmap
+  root((mindmap))
+    id0["`Introduction`"]
+    id1["`Part 1. Getting Started`"]
+      id11["`1. Introduction`"]
+      id12["`2. Introduction to Sockets`"]
+      id13["`3. Hello Server/Client`"]
+      id14["`4. Protocol Parsing`"]
+      id15["`5. The Event Loop and Nonblocking IO`"]
+    id2["`Part 2. Essential Topics`"]
+    id3["`Appendixes`"]
 
