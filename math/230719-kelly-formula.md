@@ -46,7 +46,6 @@ $$
 
 由于均值和标准差的估算总是受到不确定性的影响，因此在实践中，许多交易者倾向于使用更保守的杠杆机制，如凯利标准除以二，人们亲切地称之为 "半凯利"。凯利标准实际上应被视为使用杠杆的上限，而不是直接的规范。如果不听取这一建议，那么由于策略回报的非高斯性质，直接使用凯利值可能会导致毁灭（即账户净值消失为零）。具体解释请参考 [Money Management via the Kelly Criterion](https://www.quantstart.com/articles/Money-Management-via-the-Kelly-Criterion/)。
 
-
 # Reference
-1. 
-2. [THE KELLY CRITERION IN BLACKJACK SPORTS BETTING, AND THE STOCK MARKET](http://www.eecs.harvard.edu/cs286r/courses/fall12/papers/Thorpe_KellyCriterion2007.pdf)
+
+1. [THE KELLY CRITERION IN BLACKJACK SPORTS BETTING, AND THE STOCK MARKET](http://www.eecs.harvard.edu/cs286r/courses/fall12/papers/Thorpe_KellyCriterion2007.pdf)
