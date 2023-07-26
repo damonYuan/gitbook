@@ -36,4 +36,17 @@ $$ {d_{lnF(f)} \over d_{f}}  = {Pb \over 1 + bf} - {1 - P \over 1 - f} = 0 $$
 2. 回报率指的是扣除了所有损耗的剩余回报。
 3. 所有的利润都会被重新用于投资
 
-TODO: https://github.com/damonYuan/damonyuan.github.io/blob/main/series/quantitative-trading-with-backtrader/2020-10-20-qt-htbyoatb-6.2/2020-10-20-qt-htbyoatb-6.2.md
+在这些假设条件下，如果我们把每种策略 i 之间的资金分配标记为$$f_{i}$$, 总共有 N 个策略，即$$f = (f_{1}, f_{2},...,f_{N})$$，则每种策略的最优分配凯利准则为 
+
+$$
+f_{i} = u_{i} / \sigma_{i}
+$$
+
+其中$$u_{i}$$是超额收益的平均值，$$\sigma_{i}$$是策略的超额收益标准差。 这个公式基本上描述了每种策略应采用的最佳杠杆率。
+
+由于均值和标准差的估算总是受到不确定性的影响，因此在实践中，许多交易者倾向于使用更保守的杠杆机制，如凯利标准除以二，人们亲切地称之为 "半凯利"。凯利标准实际上应被视为使用杠杆的上限，而不是直接的规范。如果不听取这一建议，那么由于策略回报的非高斯性质，直接使用凯利值可能会导致毁灭（即账户净值消失为零）。具体解释请参考 [Money Management via the Kelly Criterion](https://www.quantstart.com/articles/Money-Management-via-the-Kelly-Criterion/)。
+
+
+# Reference
+1. 
+2. [THE KELLY CRITERION IN BLACKJACK SPORTS BETTING, AND THE STOCK MARKET](http://www.eecs.harvard.edu/cs286r/courses/fall12/papers/Thorpe_KellyCriterion2007.pdf)

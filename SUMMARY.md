@@ -18,6 +18,7 @@
 
 * [Mean and Variance of Squared Gaussian](math/230721-mean-and-variance-of-squared-gaussian.md)
 * [Topics in Mathematics with Applications in Finance](math/230720-math-with-applications-in-fin.md)
+* [凯利公式](math/230719-kelly-formula.md)
 * [Elementary Stochastic Calculus with Finance in View](math/230715-stochastic-calculus.md)
 * [A Simple Explanation of Information Gain](math/191014-a-simple-explanation-of-information-gain.md)
 
