@@ -29,3 +29,7 @@
 ## 💲 Finance
 
 * [FRM](finance/frm.md)
+
+## ✨ Mischievous
+
+* [The Red and The Black](mischievous/230731-the-red-and-the-black.md)
