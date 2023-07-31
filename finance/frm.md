@@ -22,24 +22,30 @@ mindmap
     id_r6["`STUDY SESSION 6: REGRESSION ANALYSIS`"]
     id_r7["`STUDY SESSION 7: FORECASTING, CORRELATION, AND SIMULATION`"]
       id_21["`Reading 21: Stationary Time Series`"]
-        Trends
-        Seasonality
-        Cyclicality
-          models
-            AutoRegression
-            Moving Average
-            Autoregressive Moving Average
-          components
-            shocks
-            persistence components
-          covariance stationary
-            autocovariance
-            autocorrlation function
-            partial autocorrelation function
-          serially uncorrelated
-            white noise
-              independent white noise
-                normal white noise
+```
+
+```plantuml
+@startmindmap
+* Reading 21: Stationary Time Series
+** Trends
+** Seasonality
+** Cyclicality
+*** models
+**** AutoRegression
+**** Moving Average
+**** Autoregressive Moving Average
+*** components
+**** shocks
+**** persistence components
+*** covariance stationary
+**** autocovariance
+**** autocorrlation function
+**** partial autocorrelation function
+*** serially uncorrelated
+**** white noise
+***** independent white noise
+****** normal white noise          
+@endmindmap
 ```
 
 ### Book 3: Financial Markets and Products
