@@ -24,30 +24,6 @@ mindmap
       id_21["`Reading 21: Stationary Time Series`"]
 ```
 
-```plantuml
-@startmindmap
-* Reading 21: Stationary Time Series
-** Trends
-** Seasonality
-** Cyclicality
-*** models
-**** AutoRegression
-**** Moving Average
-**** Autoregressive Moving Average
-*** components
-**** shocks
-**** persistence components
-*** covariance stationary
-**** autocovariance
-**** autocorrlation function
-**** partial autocorrelation function
-*** serially uncorrelated
-**** white noise
-***** independent white noise
-****** normal white noise          
-@endmindmap
-```
-
 ### Book 3: Financial Markets and Products
 
 ```mermaid
