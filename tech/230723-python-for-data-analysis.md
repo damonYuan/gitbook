@@ -1,4 +1,4 @@
-Python for Data Analysis
+[Python for Data Analysis](https://wesmckinney.com/book/)
 ====
 
 ![](https://wesmckinney.com/book/images/cover.png)

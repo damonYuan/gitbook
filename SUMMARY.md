@@ -4,6 +4,7 @@
 
 ## 💻 Tech
 
+* [Interpretable Machine Learning](tech/230811-interpretable-machine-learning.md)
 * [Python for Data Analysis](tech/230723-python-for-data-analysis.md)
 * [C++ for Java Programmers](tech/230717-cpp-for-java-programmers.md)
 * [典型的领域驱动设计应用架构](tech/220501-ddd-architecture.md)
