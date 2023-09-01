@@ -36,29 +36,6 @@ mindmap
 
 [READ ONLINE](https://changkun.de/modern-cpp/en-us/00-preface/)
 
-```mermaid
-mindmap
-  root((mindmap))
-    id0["`Preface`"]
-    id1["`C1: Towards Modern C++`"]
-      id10["`Compiler Options`"]
-      id11["`Deprecated features`"]
-      id12["`Compatibility with C`"]
-    id2["`C2: Language Usability Enhancements`"]  
-      id21["`Constants`"]
-      id22["`Variables and Initialization`"]
-      id23["`Type Inference`"]
-      id24["`Control Flow`"]
-      id25["`Templates`"]
-      id26["`Object Oriented`"]
-    id3["`C3: Language Runtime Enhancements`"]  
-  
-```  
-| Node | Note                                      |
-|------|-------------------------------------------|
-| id10 | clang++ and -std=c++2a                    |
-| id13 | external keyword for compatibility with C |
-
 ***
 
 ## Practice
@@ -67,18 +44,7 @@ mindmap
 
 [Build Your Own Redis with C/C++](https://build-your-own.org/redis/)
 
-```mermaid
-mindmap
-  root((mindmap))
-    id0["`Introduction`"]
-    id1["`Part 1. Getting Started`"]
-      id11["`1.Introduction`"]
-      id12["`2.Introduction to Sockets`"]
-      id13["`3.Hello Server/Client`"]
-      id14["`4.Protocol Parsing`"]
-      id15["`5.The Event Loop and Nonblocking IO`"]
-    id2["`Part 2. Essential Topics`"]
-    id3["`Appendixes`"]
+***
 
-```
+[Learn C++ online](https://www.learncpp.com/)
 
