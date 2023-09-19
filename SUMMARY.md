@@ -34,3 +34,4 @@
 ## ✨ Mischievous
 
 * [The Red and The Black](mischievous/230731-the-red-and-the-black.md)
+* [2023 Workmap](mischievous/230919-2023-workmap.md)
