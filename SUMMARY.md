@@ -18,6 +18,7 @@
 
 ## ➗ Math
 
+* [Data Science: Theories, Models, Algorithms, and Analytics](math/230930-data-science.md)
 * [StatQuest](math/230930-statquest.md)
 * [Time Series Analysis](math/230930-time-series-analysis.md)
 * [Mean and Variance of Squared Gaussian](math/230721-mean-and-variance-of-squared-gaussian.md)
