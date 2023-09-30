@@ -4,6 +4,7 @@
 
 ## 💻 Tech
 
+* [Grind 75](tech/230930-grind-75.md)
 * [Interpretable Machine Learning](tech/230811-interpretable-machine-learning.md)
 * [Python for Data Analysis](tech/230723-python-for-data-analysis.md)
 * [C++ for Java Programmers](tech/230717-cpp-for-java-programmers.md)
@@ -17,6 +18,8 @@
 
 ## ➗ Math
 
+* [StatQuest](math/230930-statquest.md)
+* [Time Series Analysis](math/230930-time-series-analysis.md)
 * [Mean and Variance of Squared Gaussian](math/230721-mean-and-variance-of-squared-gaussian.md)
 * [Topics in Mathematics with Applications in Finance](math/230720-math-with-applications-in-fin.md)
 * [Elementary Stochastic Calculus with Finance in View](math/230715-stochastic-calculus.md)
