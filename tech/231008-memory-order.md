@@ -74,3 +74,4 @@ This operates when all access to memory (that may have visible side effects on t
 - [False Sharing](https://dzone.com/articles/false-sharing)
 - [Java Volatile Keyword](https://jenkov.com/tutorials/java-concurrency/volatile.html)
 - [ManyToManyConcurrentArrayQueue](https://github.com/real-logic/agrona/blob/master/agrona/src/main/java/org/agrona/concurrent/ManyToManyConcurrentArrayQueue.java)
+- [mpmc_queue](https://drive.google.com/file/d/1uCefvM3bTnWLFrcYoMxCOKGjWwHJQM2n/view)
