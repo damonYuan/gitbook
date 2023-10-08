@@ -4,6 +4,7 @@
 
 ## 💻 Tech
 
+* [Memory Order](tech/231008-memory-order.md)
 * [Grind 75](tech/230930-grind-75.md)
 * [Interpretable Machine Learning](tech/230811-interpretable-machine-learning.md)
 * [Python for Data Analysis](tech/230723-python-for-data-analysis.md)
