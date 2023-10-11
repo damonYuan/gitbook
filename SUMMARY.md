@@ -36,7 +36,7 @@
 * [FRM](finance/frm.md)
 * [凯利公式](math/230719-kelly-formula.md)
 
-## ✨ Mischievous
+## ✨ Miscellaneous
 
-* [The Red and The Black](mischievous/230731-the-red-and-the-black.md)
-* [2023 Workmap](mischievous/230919-2023-workmap.md)
+* [The Red and The Black](miscellaneous/230731-the-red-and-the-black.md)
+* [2023 Workmap](miscellaneous/230919-2023-workmap.md)
