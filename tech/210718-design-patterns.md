@@ -266,7 +266,7 @@ In this way the handlers don't have to the successor of itself.
 
 **States Pattern**
 
-Please check this awesome article about [Deterministic Finite Automation (DFA)](https://leetcode.com/problems/string-to-integer-atoi/solution/) from Leetcode or [LeetCode——8.字符串转整数(atoi)](https://blog.51cto.com/u_15711477/5453226).
+Please check this awesome article about [Deterministic Finite Automation (DFA)](https://leetcode.com/problems/string-to-integer-atoi/solution/) from Leetcode or [LeetCode——8.字符串转整数(atoi)](https://blog.51cto.com/u_13669690/5037189?articleABtest=0).
 
 ```
 public interface State {
