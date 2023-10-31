@@ -217,19 +217,21 @@ It's just to implement the Cloneable interface in java. Note that if you want to
 ```
 public interface Handler {
     void setSuccessor(Handler hanlder);
-    void handle(int i);
+    void handle();
 }
 
 class AtaskHandler implements Handler {
     private Handler successor = null;
+    
     @Override
     public void setSuccessor(Handler handler) {
         this.successor = handler;
     }
+    
     @Override
-    public void handle(int i) {
+    public void handle() {
         if (this.successor) {
-            this.successor.handle(i + 1);
+            this.successor.handle();
         }
     }
 }
@@ -239,18 +241,22 @@ And there is another more common pattern which is widely used in servlet,
 
 ```
 public interface Handler {
-    void handle(int i);
+    void handle(Context c);
 }
-class Processor implements Handler {
+public interface Context {
+    void register(Handler h);
+}
+class Processor implements Context {
     private List<Handler> handlers = new ArrayList<>();
+    
+    @Override
     public void register(Handler handler) {
         handlers.add(handler);
     }
 
-    @Override
-    public void handle(int i) {
+    public void handle() {
         for (int j = 0; j < this.handlers.size(); j++) {
-            h.handler(i + j);
+            h.handler(this);
         }
     }
 }
@@ -260,7 +266,7 @@ In this way the handlers don't have to the successor of itself.
 
 **States Pattern**
 
-Please check this awesome article about [Deterministic Finite Automation (DFA)](https://leetcode.com/problems/string-to-integer-atoi/solution/) from Leetcode.
+Please check this awesome article about [Deterministic Finite Automation (DFA)](https://leetcode.com/problems/string-to-integer-atoi/solution/) from Leetcode or [LeetCode——8.字符串转整数(atoi)](https://blog.51cto.com/u_15711477/5453226).
 
 ```
 public interface State {
