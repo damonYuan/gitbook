@@ -344,6 +344,8 @@ Here the concrete `Expression` classes will interpret the context accordingly. T
 
 **Visitor Pattern**
 
+[Visitor Pattern](https://www.lenshood.dev/2019/07/14/visitor-pattern/)
+
 ```
 public interface Visitor {
     void visit(Element e);
