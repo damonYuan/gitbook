@@ -20,7 +20,13 @@ The `with_metaclass()` function makes use of the fact that metaclasses are
 
 - a) inherited by subclasses, and 
 - b) a metaclass can be used to generate new classes and 
-- c) when you subclass from a base class with a metaclass, creating the actual subclass object is delegated to the metaclass. 
+- c) when you subclass from a base class with a metaclass, creating the actual subclass object is delegated to the metaclass.
+- d) `type.__new__(metaclass, 'temporary_class', (), {})` uses the `metaclass` metaclass to create a new class object named `temporary_class` that is entirely empty otherwise. `type.__new__(metaclass, ...)` is used instead of `metaclass(...)` to avoid using the special `metaclass.__new__()` implementation that is needed for the slight of hand in a next step to work.
+
+    If `metaclass(...)` is used there will be an extra `temporary_class` base class.
+    ```
+    (<class 'metaclass_tests.Foo'>, <class 'metaclass_tests.temporary_class'>, <class 'object'>)
+    ```
 
 It effectively creates a new, temporary base class with a temporary metaclass `metaclass` that, when used to create the subclass swaps out the temporary base class.
 
