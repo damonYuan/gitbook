@@ -25,6 +25,7 @@ The `with_metaclass()` function makes use of the fact that metaclasses are
 
     If `metaclass(...)` is used there will be an extra `temporary_class` base class.
     ```
+    # print(Foo.__mro__)
     (<class 'metaclass_tests.Foo'>, <class 'metaclass_tests.temporary_class'>, <class 'object'>)
     ```
 
