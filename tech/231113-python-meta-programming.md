@@ -66,6 +66,83 @@ class Foo(temporary_class): # L2
 
 3. the `def __new__(cls, name, this_bases, d)` function will be called and `metaclass`, `Foo`, `temporary_class` and `{}` will be passed in. Then `meta(name, bases, d)` will be used to create the actual `Foo` class. Note that as no instance of `metaclass` is return in the `__new__` method, the `__init__` method inside the `metaclass` will never be called.
 
+# Tests
+
+```
+import unittest
+
+
+def with_metaclass_old(meta, *bases):
+    class metaclass(meta):
+        def __new__(cls, name, this_bases, d):
+            print("metaclass __new__")
+            return meta(name, bases, d)
+
+    print("with_metaclass")
+    return metaclass(str('temporary_class'), (), {})
+
+
+def with_metaclass(meta, *bases):
+    class metaclass(meta):
+        def __new__(cls, name, this_bases, d):
+            print("metaclass __new__")
+            # return super(meta, cls).__new__(cls, name, bases, d) # metaclass.__init__ being called
+            # return type.__new__(cls, name, bases, d) # metaclass.__init__ being called
+            # return meta.__new__(cls, name, bases, d) # metaclass.__init__ being called
+            return meta(name, bases, d)
+
+        def __init__(cls, name, bases, attrs):
+            print("metaclass __init__")
+
+    print("with_metaclass")
+    return type.__new__(metaclass, str('temporary_class'), (), {})
+
+
+class Meta(type):
+    def __new__(cls, clsname, bases, attrs):
+        print("Meta __new__")
+        return super(Meta, cls).__new__(cls, clsname, bases, attrs)
+
+    def __init__(cls, name, bases, attrs):
+        print("Meta __init__")
+        type.__init__(cls, name, bases, attrs)
+
+    def __call__(cls, *args, **kwargs):
+        print("Meta __call__")
+        return super(Meta, cls).__call__(*args, **kwargs)
+
+
+temporary_class = with_metaclass(Meta, object)
+
+
+class Foo(temporary_class):
+    def __new__(cls, *args, **kwargs):
+        print("Foo __new__")
+        return super(Foo, cls).__new__(cls, *args, **kwargs)
+
+    def __int__(self, *args, **kwargs):
+        print("Rectangle __int__")
+
+
+class MetaclassTests(unittest.TestCase):
+    def setUp(self):
+        print(">>>> classes have been setup")
+        print(type(Foo))
+        print(Foo.__mro__)
+
+    def test_create_instance(self):
+        print(">>>> test_create_instance")
+        foo = Foo()
+
+
+    def tearDown(self):
+        pass
+
+
+if __name__ == "__main__":
+    unittest.main()
+
+```
 
 # Reference
 1. [Method Resolution Order (MRO)](https://stackoverflow.com/questions/3277367/how-does-pythons-super-work-with-multiple-inheritance)
