@@ -7,4 +7,4 @@ Python Meta-programming
 4. __call__
 5. [Creating a singleton in Python](https://stackoverflow.com/questions/6760685/creating-a-singleton-in-python)
 6. [What are metaclasses in Python?](https://stackoverflow.com/questions/100003/what-are-metaclasses-in-python)
-7. [Supercharge Your Classes With Python super()](https://realpython.com/python-super/)
+7. [Supercharge Your Classes With Python super()](https://realpython.com/python-super/) and mixin
