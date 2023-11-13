@@ -1,4 +1,4 @@
-python metaclass
+Python Metaclass
 ====
 
 In backtrader `py3.py` class, there is a magic method which is used extensively by the code.
