@@ -3,7 +3,7 @@ Python Metaclass
 
 In backtrader `py3.py` class, there is a magic method which is used extensively by the code.
 
-```
+```python
 # This is from Armin Ronacher from Flash simplified later by six
 def with_metaclass(meta, *bases):
     """Create a base class with a metaclass."""
@@ -24,7 +24,7 @@ The `with_metaclass()` function makes use of the fact that metaclasses are
 - d) `type.__new__(metaclass, 'temporary_class', (), {})` uses the `metaclass` metaclass to create a new class object named `temporary_class` that is entirely empty otherwise. `type.__new__(metaclass, ...)` is used instead of `metaclass(...)` to avoid using the special `metaclass.__new__()` implementation that is needed for the slight of hand in a next step to work.
 
     If `metaclass(...)` is used there will be an extra `temporary_class` base class.
-    ```
+    ```python
     # print(Foo.__mro__)
     (<class 'metaclass_tests.Foo'>, <class 'metaclass_tests.temporary_class'>, <class 'object'>)
     ```
@@ -33,7 +33,7 @@ It effectively creates a new, temporary base class with a temporary metaclass `m
 
 and it could be used as 
 
-```
+```python
 class Meta(type):
     def __new__(cls, clsname, bases, attrs):
         print("Meta __new__")
@@ -68,7 +68,7 @@ class Foo(temporary_class): # L2
 
 # Tests
 
-```
+```python
 import unittest
 
 
