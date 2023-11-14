@@ -46,5 +46,11 @@ mindmap
 
 ***
 
+[Let's Build a Simple Database](https://cstack.github.io/db_tutorial/)
+
+![](https://cstack.github.io/db_tutorial/assets/images/arch2.gif)
+
+***
+
 [Learn C++ online](https://www.learncpp.com/)
 
