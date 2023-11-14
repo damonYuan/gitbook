@@ -1,7 +1,7 @@
 Memory Order
 ====
 
-```
+```cpp
 std::atomic<size_t>         enqueue_pos_;
 pos = enqueue_pos_.load(std::memory_order_relaxed);
 ```
@@ -9,7 +9,7 @@ The above example coms from [Bounded MPMC queue](https://www.1024cores.net/home/
 
 The order of instruction execution is important. The compiler / java VM and the CPU are allowed to reorder instructions in the program for performance reasons, as long as the semantic meaning of the instructions remain the same. For instance, look at the following instructions,
 
-```
+```cpp
 int a = 1;
 int b = 2;
 
@@ -19,7 +19,7 @@ b++;
 
 These instructions could be reordered to the following sequence without losing the semantic meaning of the program:
 
-```
+```cpp
 int a = 1;
 a++;
 
