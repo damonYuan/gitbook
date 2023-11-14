@@ -10,7 +10,7 @@ description: Design Patterns with Java Examples.
 
 This pattern is one of the incarnation of Dependency Injection.
 
-```
+```java
 class StrategyContext {
     private Strategy strategy;
     public StrategyContext(Strategy strategy) {
@@ -29,7 +29,7 @@ Note StrategyContext doesn't implement Strategy interface.
 
 **Proxy Pattern**
 
-```
+```java
 class StrategyProxy implements Strategy {
     private Strategy strategy;
     public StrategyProxy() {
@@ -49,7 +49,7 @@ Note both StrategyProxy and ConcreteStrategy have implement the Strategy interfa
 
 **Decorator Pattern**
 
-```
+```java
 class ConcreteComponent implements Component {
     @Override
     public void run() {
@@ -77,7 +77,7 @@ This pattern helps to add more functionalities without changing the original tar
 
 The implementation of Adaptor Pattern is the same as that of Proxy Pattern while with different goal.
 
-```
+```java
 public interface Worker {
     void run();
 }
@@ -101,7 +101,7 @@ Note only BeggerAdaptor has implemented the Worker interface.
 
 There are multiple implementation methods for Singleton Pattern in Java as listed here - [Java Singleton Design Pattern Best Practices with Examples](https://www.journaldev.com/1377/java-singleton-design-pattern-best-practices-examples). My favorite one is Bill Pugh Singleton Implementation, because it's concise and thread-safe.
 
-```
+```java
 public class BillPughSingleton {
     private BillPughSingleton(){}
     private static class SingletonHelper{
@@ -115,7 +115,7 @@ public class BillPughSingleton {
 
 **Simple Factory Pattern**
 
-```
+```java
 public class OperationFactory {
     public static Operation createOperation(String operation) {
         switch (operation) {
@@ -138,7 +138,7 @@ Note that from my perspective of view **Factory Pattern** and **Abstract Factory
 
 This pattern is to reduce the cost of resource on recreating instances, one common example is Java String.
 
-```
+```java
 public class FlyWeight {
     private String name;
     public FlyWeight(String name) {
@@ -163,7 +163,7 @@ Note that in Simple Factory Pattern a new object is always returned, however in 
 
 **Builder Pattern**
 
-```
+```java
 Class ContextBuilder {
     String color;
     Integer size;
@@ -214,7 +214,7 @@ It's just to implement the Cloneable interface in java. Note that if you want to
 
 **Chain of Responsibility Pattern**
 
-```
+```java
 public interface Handler {
     void setSuccessor(Handler hanlder);
     void handle();
@@ -239,7 +239,7 @@ class AtaskHandler implements Handler {
 
 And there is another more common pattern which is widely used in servlet,
 
-```
+```java
 public interface Handler {
     void handle(Context c);
 }
@@ -268,7 +268,7 @@ In this way the handlers don't have to the successor of itself.
 
 Please check this awesome article about [Deterministic Finite Automation (DFA)](https://leetcode.com/problems/string-to-integer-atoi/solution/) from Leetcode or [LeetCode——8.字符串转整数(atoi)](https://blog.51cto.com/u_13669690/5037189?articleABtest=0).
 
-```
+```java
 public interface State {
     void handle(Context context);
 }
@@ -328,7 +328,7 @@ Example for the 3 implementation of State Pattern - [Example](https://github.com
 
 **Interpreter Pattern**
 
-```
+```java
 class Context {
     private String value;
     public Context(String v) {
@@ -346,7 +346,7 @@ Here the concrete `Expression` classes will interpret the context accordingly. T
 
 [Visitor Pattern](https://www.lenshood.dev/2019/07/14/visitor-pattern/)
 
-```
+```java
 public interface Visitor {
     void visit(Element e);
 }
@@ -397,7 +397,7 @@ This pattern encapsulates the elements inside an `Entirety` object and allows th
 
 **Template Pattern**
 
-```
+```java
 abstract class AbstractClass {
     public void templateMethod {
         System.out.println("I am the stupid template...");
@@ -415,7 +415,7 @@ The target for this pattern is DRY - Don't Repeat Yourself.
 
 **Facade Pattern**
 
-```
+```java
 class Facade {
     SubSystemOne one;
     SubSystemTwo two;
@@ -443,7 +443,7 @@ This pattern is to reduce the complexity of the interface that an external depen
 
 **Observer Pattern**
 
-```
+```java
 class Subject {
     private ArrayList<Listener>() listeners = new ArrayList();
     public void addListener(Listener listener) {
@@ -468,7 +468,7 @@ public interface Listener {
 
 This pattern is quite common in frontend application when preparing the data to be submitted to the backend.
 
-```
+```java
 class Data {
     private String username;
     private int amount;
@@ -510,7 +510,7 @@ public static void main(String[] args) {
 
 Composite Pattern combines objects into a tree structure to represent the "part-whole" hierarchy.
 
-```
+```java
 public interface Component {
     void add(Component c);
     void remove(Component c);
@@ -579,7 +579,7 @@ public static void main(String[] args) {
 
 Actually it's a preorder tree traversal which can be implemented as
 
-```
+```java
 class Node {
     private List<Node> leaves = new ArrayList<>();
     private String name;
@@ -609,7 +609,7 @@ class Node {
 
 In Java there are `Iterator<T>` interface and `Iterable<T>` interface. The `Iterable<T>` requires an implementation of `Iterator<T> iterator();` to return an `Iterator<T>` object. The `Iterator<T>` requires the implementation of `boolean hasNext();` and `T next();` methods.
 
-```
+```java
 class Ledger implements Iterable<String> {
     private String[] records = new String[] { "1st record", "2nd record", "3rd record" };
 
@@ -650,7 +650,7 @@ public static void main(String[] args) {
 
 **Mediator Pattern**
 
-```
+```java
 public interface Participant {
     void send(String msg);
     void receive(String msg);
