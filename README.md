@@ -2,4 +2,3 @@
 
 - **Email:** [damon.yuan.dev@gmail.com](mailto:damon.yuan.dev@gmail.com)
 - **GitHub:** [https://github.com/damonYuan](https://github.com/damonYuan)
-- **QuanTech Weekly:** [https://midtown.gitbook.io/quantech/](https://midtown.gitbook.io/quantech/)
