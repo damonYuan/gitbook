@@ -4,6 +4,7 @@
 
 ## 💻 Tech
 
+* [A Lock-Free Ring Buffer](tech/231127-a-lock-free-ring-buffer.md)
 * [Interesting Bitwise Operation](tech/231116-interesting-bitwise.md)
 * [Python Metaclass](tech/231113-python-meta-programming.md)
 * [Memory Order](tech/231008-memory-order.md)
