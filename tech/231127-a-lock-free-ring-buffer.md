@@ -1,4 +1,4 @@
-# A Lock-free Ring Buffer
+# A Lock-free Ring Buffer in Java
 
 ## Code
 
