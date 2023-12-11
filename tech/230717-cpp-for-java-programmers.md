@@ -54,3 +54,9 @@ mindmap
 
 [Learn C++ online](https://www.learncpp.com/)
 
+*** 
+
+Blogs,
+
+- [Understanding C/C++ Build system by building a simple project](https://dev.to/narasimha1997/understanding-c-c-build-system-by-building-a-simple-project-part-1-4fff) and here is the [code](https://github.com/damonYuan/memlogger) updated for Mac OS.
+
