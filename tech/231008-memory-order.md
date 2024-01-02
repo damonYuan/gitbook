@@ -1,5 +1,6 @@
-Memory Order
-====
+# Memory Order
+
+## Memory Order in CPP
 
 ```cpp
 std::atomic<size_t>         enqueue_pos_;
@@ -30,13 +31,13 @@ b++;
 
 There are different options when loading the atomic variable, this blog is to discuss the difference between them.
 
-# memory_order_relaxed
+### memory_order_relaxed
 
 This memory ordering option provides the fewest ordering guarantees. It allows the greatest level of optimization freedom for the compiler and the CPU. It does not enforce any synchronization or ordering constraints on other memory accesses. It is useful in situations where strict ordering is not required or when the synchronization is handled through other means (e.g., locks or other synchronization primitives).
 
 This type of atomic operation can have various optimizations performed on them, and they do not guarantee an order concerning locking and normal memory accesses.
 
-# memory_order_acquire
+### memory_order_acquire
 
 Reads from and writes to other variables cannot be reordered to occur before a read of a volatile variable, if the reads / writes originally occurred after the read of the volatile variable. 
 
@@ -44,11 +45,11 @@ Notice that it is possible for reads of other variables that occur before the re
 
 From before to after is allowed, but from after to before is not allowed.
 
-# memory_order_consume
+### memory_order_consume
 
 This performs the same operation as `memory_order_acquire`, except that the ordering guarantees only apply to dependent data.
 
-# memory_order_release
+### memory_order_release
 
 Reads from and writes to other variables cannot be reordered to occur after a write to a volatile variable, if the reads / writes originally occurred before the write to the volatile variable.
 
@@ -56,17 +57,19 @@ The reads / writes before a write to a volatile variable are guaranteed to "happ
 
 From after to before is allowed, but from before to after is not allowed.
 
-# memory_order_acq_rel
+### memory_order_acq_rel
 
 This is a hybrid of memory_order_acquire and memory_order_release. Unlike the sequentially consistent model, this hybrid applies a happens-before relationship to dependent variables. This variant allows the synchronization requirements between independent readings and writes to be relaxed.
 
-# memory_order_seq_cst
+### memory_order_seq_cst
 
 This operates when all access to memory (that may have visible side effects on the other threads involved) has already happened. This is the strictest memory order variant. Thus, it guarantees the most negligible unexpected side effects between the thread interactions through non-atomic memory accesses.
 
+## Memory Order in Java
 
+TODO
 
-# Reference
+## Reference
 - [Memory Ordering for Atomic Operations in C++0x](https://www.developerfusion.com/article/138018/memory-ordering-for-atomic-operations-in-c0x/)
 - [Acquire and Release Fences](https://preshing.com/20130922/acquire-and-release-fences/)
 - [What is memory_order in C?](https://www.educative.io/answers/what-is-memoryorder-in-c)
