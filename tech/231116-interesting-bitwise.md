@@ -10,6 +10,8 @@ Here comes up a simple question - how to get the insert point `n` if `-n-1` is r
 
 We know the overflow property of the computer's complement: when an unsigned number overflows upward, it becomes 0. when `n + ~n`, all the bits in the result equals to 1, and taking the overflow property into account, `n + ~n + 1 = 0`, which equals to `~n = -(n+1)`. Using this property we can find the insertion point faster and smarter.
 
+Reference in js: [Double bitwise NOT (~~)](https://j11y.io/cool-stuff/double-bitwise-not/)
+
 ## Round a Positive Number Up to its Nearest Quadratic Power
 
 The following snippet of code could round a positive number up to its nearest quadratic power,
