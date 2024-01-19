@@ -19,12 +19,7 @@
 
 ## ➗ Math
 
-* [Data Science: Theories, Models, Algorithms, and Analytics](math/230930-data-science.md)
-* [StatQuest](math/230930-statquest.md)
-* [Time Series Analysis](math/230930-time-series-analysis.md)
 * [Mean and Variance of Squared Gaussian](math/230721-mean-and-variance-of-squared-gaussian.md)
-* [Topics in Mathematics with Applications in Finance](math/230720-math-with-applications-in-fin.md)
-* [Elementary Stochastic Calculus with Finance in View](math/230715-stochastic-calculus.md)
 * [A Simple Explanation of Information Gain](math/191014-a-simple-explanation-of-information-gain.md)
 
 ## 📘 Product
@@ -33,10 +28,4 @@
 
 ## 💲 Finance & Trading
 
-* [FRM](finance/frm.md)
 * [凯利公式](math/230719-kelly-formula.md)
-
-## ✨ Miscellaneous
-
-* [The Red and The Black](miscellaneous/230731-the-red-and-the-black.md)
-* [2023 Workmap](miscellaneous/230919-2023-workmap.md)
