@@ -2,9 +2,10 @@ Local Volatility in Terms of Implied Volatility
 ====
 
 > [Local volatility surface corresponding to the implied volatility surface](https://quant.stackexchange.com/questions/16898/local-volatility-surface-corresponding-to-the-implied-volatility-surface)
+> 
 > Loosely speaking:
-> Local volatility is the instantaneous volatility after time T if the spot is S at that time.
-> Implied volatility is the expected integrated volatility from today up to time T if the spot ends up at S at that time.
+> - Local volatility is the instantaneous volatility after time T if the spot is S at that time.
+> - Implied volatility is the expected integrated volatility from today up to time T if the spot ends up at S at that time.
 
 1. [Lecture 1: Stochastic Volatility and Local Volatility](https://docplayer.net/17523808-Lecture-1-stochastic-volatility-and-local-volatility.html)
 2. [Derivation of Local Volatility](https://www.frouah.com/finance%20notes/Dupire%20Local%20Volatility.pdf)
