@@ -19,6 +19,7 @@
 
 ## ➗ Math
 
+* [Quant Questions](math/240124-local-vol.md)
 * [Local Volatility in Terms of Implied Volatility](math/240124-local-vol.md)
 * [Mean and Variance of Squared Gaussian](math/230721-mean-and-variance-of-squared-gaussian.md)
 * [A Simple Explanation of Information Gain](math/191014-a-simple-explanation-of-information-gain.md)
