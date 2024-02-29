@@ -19,15 +19,16 @@
 
 ## ➗ Math
 
-* [Quant Questions](math/240124-local-vol.md)
 * [Local Volatility in Terms of Implied Volatility](math/240124-local-vol.md)
 * [Mean and Variance of Squared Gaussian](math/230721-mean-and-variance-of-squared-gaussian.md)
 * [A Simple Explanation of Information Gain](math/191014-a-simple-explanation-of-information-gain.md)
 
 ## 📘 Product
 
+* [Making a Trading System from Scratch](product/240229-trading-system-from-scratch.md)
 * [功能需求模版 FRD Template](product/211225-frd-template.md)
 
-## 💲 Finance & Trading
+## 💲 Trading
 
-* [凯利公式](math/230719-kelly-formula.md)
+* [Quant Questions](trading/240229-quant-questions.md)
+* [凯利公式](trading/230719-kelly-formula.md)
