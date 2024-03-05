@@ -10,3 +10,10 @@ $$
 K_{2} = \frac{1}{5}K_{1}+\frac{4}{5}K_{3}.
 $$
 
+Since
+
+$$
+\frac{1}{5}C_{1} + \frac{4}{5}C_{3} = 5.20 < 5.50 = C_{2},
+$$
+
+the convexity of option prices with respect to strike is violated.
