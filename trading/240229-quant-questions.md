@@ -17,3 +17,7 @@ $$
 $$
 
 the convexity of option prices with respect to strike is violated.
+
+![](https://raw.githubusercontent.com/Midtown-Innovation/quantech-weekly/main/resource/option_convexity.png "convexity of option prices")
+
+The arbitrage strategy is to "buy low" $$\frac{1}{5}C_{1} + \frac{4}{5}C_{3}$$ and "sell high" $$C_{2}$$. 
