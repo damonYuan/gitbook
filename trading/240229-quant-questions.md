@@ -69,3 +69,12 @@ Note that $$150 = 500 \cdot (5.50 - 5.20)$$, i.e., the risk-free profit $150 is 
 > (i) What is the sum of the eigenvalues of the correlation matrix of n random variables?
 > 
 > (ii) Find a lower bound for the sum of the eigenvalues of the inverse of a nonsingular correlation matrix of n random variables.
+
+Note that the eigenvalues of a matrix A are the roots of the characteristic polynomial $$P_{A}(t) = det(tI - A)$$ of the matrix A. And the calculation of determinant of a matrix could be find in [Determinant of a Matrix](https://www.mathsisfun.com/algebra/matrix-determinant.html).
+
+$$
+\begin{aligned}
+det(tI -A) &= \prod_{i=1}^{n}(t- \lambda_{})
+&= t^{n} - (\sum_{i=1}{n}\lambda_{i})t^{n-1} + ... + (-1)^{n}\prod_{i=1}{n}\lambda_{i}
+\end{aligned}
+$$
