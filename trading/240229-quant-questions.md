@@ -20,4 +20,46 @@ the convexity of option prices with respect to strike is violated.
 
 ![](https://raw.githubusercontent.com/Midtown-Innovation/quantech-weekly/main/resource/option_convexity.png "convexity of option prices")
 
-The arbitrage strategy is to "buy low" $$\frac{1}{5}C_{1} + \frac{4}{5}C_{3}$$ and "sell high" $$C_{2}$$. 
+The arbitrage strategy is to "buy low" $$\frac{1}{5}C_{1} + \frac{4}{5}C_{3}$$ and "sell high" $$C_{2}$$.  To normalize units, we multiply the positions by 500 to obtain the following arbitrage strategy: "buy low" $$100C_{1}+400C_{2}$$ and "sell high" $$500C_{2}$$. Note that buying $$100C_{1}$$ is equivalent to buying 100 units of the underlying asset since the asset does not pay dividends.
+
+Arbitrage Strategy: 
+- buy 100 units of the underlying asset for $2200;
+- buy 400 calls with strike $$K_{3} = 25$$ for $400;
+- sell 500 calls with strike $$K_{2} = 20$$ for 2750;
+- realize a positive cash flow of $150.
+
+The positive cash flow $150 represents risk-free profit since the arbitrage portfolio does not lose money at maturity: The value of the arbitrage portfolio at the maturity T of the options is 
+
+$$
+\begin{aligned}
+V(T) &= 100S(T) - 500C_{2}(T) + 400C_{3}(T) \\
+&= 100S(T) - 500\max(S(T) - 20, 0) + 400\max(S(T) -25, 0)
+\end{aligned}
+$$
+
+If $$S(T) \leq 20$$,
+
+$$
+V(T) = 100S(T) \geq 0
+$$
+
+If $$20\lt S(T)\leq25$$,
+
+$$
+\begin{aligned}
+V(T) &= 100S(T) - 500(S(T)-20) \\
+&= 10000-400S(T) \geq 0
+\end{aligned}
+$$
+
+If $$25 \lt S(T)$$,
+
+$$
+\begin{aligned}
+V(T) &= 100S(T)-500(S(T)-20) \\
+&\;+400(S(T)-25) \\
+&= 0
+\end{aligned}
+$$
+
+Note that $$150 = 500 \cdot (5.50 - 5.20)$$, i.e., the risk-free profit $150 is equal to the size of the convexity disparity $5.50 - $5.20 times the amplifier factor 500.
