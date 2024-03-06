@@ -70,7 +70,7 @@ Note that $$150 = 500 \cdot (5.50 - 5.20)$$, i.e., the risk-free profit $150 is 
 > 
 > (ii) Find a lower bound for the sum of the eigenvalues of the inverse of a nonsingular correlation matrix of n random variables.
 
-Note that the eigenvalues of a matrix A are the roots of the characteristic polynomial $$P_{A}(t) = det(tI - A)$$ of the matrix A. And the calculation of determinant of a matrix could be find in [Determinant of a Matrix](https://www.mathsisfun.com/algebra/matrix-determinant.html).
+(i) Note that the eigenvalues of a matrix A are the roots of the characteristic polynomial $$P_{A}(t) = det(tI - A)$$ of the matrix A. And the calculation of determinant of a matrix could be find in [Determinant of a Matrix](https://www.mathsisfun.com/algebra/matrix-determinant.html).
 
 $$
 \begin{aligned}
@@ -78,3 +78,9 @@ det(tI -A) &= \prod_{i=1}^{n}(t- \lambda_{i}) \\
 &= t^{n} - (\sum_{i=1}^{n}\lambda_{i})t^{n-1} + ... + (-1)^{n}\prod_{i=1}^{n}\lambda_{i}
 \end{aligned}
 $$
+
+Note that the only terms of order $$n-1$$ from $$det(tI -A)$$ are obtained by multiplying the main diagonal entries of $$tI -A$$. In other words, the coefficient of the term $$t^{n-1}$$ in $$det(tI - A)$$ is the same as the coefficient of the term $$t^{n-1}$$ in $$\prod_{i=1}^n(t-A(i,i))$$, which is equal to $$-\sum_{i=1}^{n}A(i,i) = -tr(A)$$, thus $$\sum_{i=1}^{n}\lambda_{i} = \sum_{i=1}^{n}A(i,i) = tr(A)$$.
+
+Since the correlation matrix of n random variable s is an nxn matrix with all main diagonal entries equal to 1, the trace of the correlation matrix is equal to n.
+
+We conclude that the sum of the eigenvalues of the correlation matrix of n random variable is n.
