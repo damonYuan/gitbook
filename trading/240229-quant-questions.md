@@ -74,7 +74,7 @@ Note that the eigenvalues of a matrix A are the roots of the characteristic poly
 
 $$
 \begin{aligned}
-det(tI -A) &= \prod_{i=1}^{n}(t- \lambda_{}) \\
+det(tI -A) &= \prod_{i=1}^{n}(t- \lambda_{i}) \\
 &= t^{n} - (\sum_{i=1}^{n}\lambda_{i})t^{n-1} + ... + (-1)^{n}\prod_{i=1}^{n}\lambda_{i}
 \end{aligned}
 $$
