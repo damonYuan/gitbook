@@ -67,7 +67,7 @@ This operates when all access to memory (that may have visible side effects on t
 
 ## Memory Order in Java
 
-TODO
+Check the README and example in [RingBuffer](https://github.com/damonYuan/ringbuffer).
 
 ## Reference
 - [Memory Ordering for Atomic Operations in C++0x](https://www.developerfusion.com/article/138018/memory-ordering-for-atomic-operations-in-c0x/)
