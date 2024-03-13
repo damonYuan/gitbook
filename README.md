@@ -1,6 +1,7 @@
 # Damon's Blog
 
-> I am tormented with an everlasting itch for things remote.
+![Opera House](.gitbook/assets/opera-house.jpg "Opera House 240208")
+**@ Opera House 240208**
 
 - **Email:** [d@damonyuan.com](mailto:d@damonyuan.com)
 - **GitHub:** [https://github.com/damonYuan](https://github.com/damonYuan)
