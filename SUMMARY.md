@@ -8,6 +8,7 @@
 * [Python Metaclass](tech/231113-python-meta-programming.md)
 * [Memory Order](tech/231008-memory-order.md)
 * [Grind 75](tech/230930-grind-75.md)
+* [Kaggle](tech/240312-kaggle.md)
 * [C++ for Java Programmers](tech/230717-cpp-for-java-programmers.md)
 * [典型的领域驱动设计应用架构](tech/220501-ddd-architecture.md)
 * [如何正确地在 Linux 中部署应用](tech/220117-deploy-app-in-linux.md)
