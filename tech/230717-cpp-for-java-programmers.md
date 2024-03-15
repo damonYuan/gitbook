@@ -58,6 +58,8 @@ mindmap
 
 *** 
 
+https://learnmoderncpp.com/
+
 ## Blogs
 
 ### Build System
