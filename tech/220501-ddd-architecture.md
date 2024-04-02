@@ -12,28 +12,59 @@ description: 对典型的领域驱动设计 (Domain Driven Design) 应用架构�
 
 ```
 .
+├── README.md
+├── build.gradle
+├── gradle
+│   └── wrapper
+│       ├── gradle-wrapper.jar
+│       └── gradle-wrapper.properties
+├── gradlew
+├── gradlew.bat
+├── settings.gradle
 └── src
     ├── main
-    │   ├── java
-    │   │   └── com
-    │   │       └── damonyuan
-    │   │           └── ddd
-    │   │               ├── config
-    │   │               ├── controller
-    │   │               ├── dao
-    │   │               ├── domain
-    │   │               ├── service
-    │   │               │   ├── dto
-    │   │               │   └── impl
-    │   │               └── utils
-    │   └── resources
-    │       ├── static
-    │       └── templates
+    │   ├── java
+    │   │   └── com
+    │   │       └── damonyuan
+    │   │           └── ddd
+    │   │               ├── DddApplication.java
+    │   │               ├── config
+    │   │               │   ├── SwaggerConfig.java
+    │   │               │   └── package-info.java
+    │   │               ├── controller
+    │   │               │   ├── OrderController.java
+    │   │               │   ├── ProductController.java
+    │   │               │   └── package-info.java
+    │   │               ├── dao
+    │   │               │   ├── OrderMapper.java
+    │   │               │   ├── OrderProductMapper.java
+    │   │               │   ├── ProductMappter.java
+    │   │               │   └── package-info.java
+    │   │               ├── domain
+    │   │               │   ├── Order.java
+    │   │               │   ├── OrderProduct.java
+    │   │               │   ├── Product.java
+    │   │               │   └── package-info.java
+    │   │               ├── service
+    │   │               │   ├── IOrderService.java
+    │   │               │   ├── IProductService.java
+    │   │               │   ├── dto
+    │   │               │   │   ├── OrderDetails.java
+    │   │               │   │   └── package-info.java
+    │   │               │   ├── impl
+    │   │               │   │   └── package-info.java
+    │   │               │   └── package-info.java
+    │   │               └── utils
+    │   │                   ├── RegexHelper.java
+    │   │                   └── package-info.java
+    │   └── resources
+    │       └── application.properties
     └── test
         └── java
             └── com
                 └── damonyuan
                     └── ddd
+                        └── DddApplicationTests.java
 ```
 
 其中
