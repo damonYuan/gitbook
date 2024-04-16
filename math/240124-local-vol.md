@@ -8,7 +8,7 @@ Local Volatility in Terms of Implied Volatility
 > - Implied volatility is the expected integrated volatility from today up to time T if the spot ends up at S at that time.
 
 1. [Lecture 1: Stochastic Volatility and Local Volatility](https://docplayer.net/17523808-Lecture-1-stochastic-volatility-and-local-volatility.html)
-2. [Derivation of Local Volatility](https://www.frouah.com/finance%20notes/Dupire%20Local%20Volatility.pdf)
+2. [Derivation of Local Volatility](https://github.com/damonYuan/gitbook/blob/main/.gitbook/assets/Dupire%20Local%20Volatility.pdf)
    1. Note that there is a typo in the article [In Dupire's paper, why is (𝑆𝑡,𝑡) in the (𝐾,𝑇) space?](https://quant.stackexchange.com/questions/16343/in-dupires-paper-why-is-s-t-t-in-the-k-t-space/71782#71782)
 3. [21-256: Implicit partial differentiation](https://www.math.cmu.edu/~cnewstea/teaching/old/teaching/21-256/implicit-partial-diff.pdf)
 
