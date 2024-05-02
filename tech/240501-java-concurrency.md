@@ -49,3 +49,12 @@ Java Concurrency in Practice
    - check-then-act 
    - read-modify-write
 ### 2.3 locking   
+1. To preserve state consistency, update related state variables in a single atomic operation.
+2. intrinsic locks / monitor locks -> mutexes; and reentrant
+### 2.4 Guarding state with locks
+1. For each mutable state variable that may be accessed by more than one thread, all accesses to that variable must be performed with the same lock held. In this case, we say that the variable is guarded by that lock.
+2. Every shared, mutable variable should be guarded by exactly one lock. Make it clear to maintainers which lock that is.
+3. Code auditing tools like FindBugs can identify when a variable is frequently but not always accessed with a lock held, which may indicate a bug.
+4. A common locking convention is to encapsulate all mutable state within an object and to protect it from concurrent access by synchronizing any code path that accesses mutable state using the object’s intrinsic lock. This pattern is used by many thread-safe classes, such as Vector and other synchronized collection classes.
+5. For every invariant that involves more than one variable, all the variables involved in that invariant must be guarded by the same lock.
+### 2.5 Liveness and performance
