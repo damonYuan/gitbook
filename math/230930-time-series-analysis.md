@@ -13,3 +13,10 @@ mindmap
         extrapolation
         error is growing
 ```
+
+## [Basics of PCA (Principal Component Analysis) : Data Science Concepts](https://youtu.be/pmG4K79DUoI?si=3XdV9ZG7wIHCw2RO)
+
+Targets:
+1. dimension reduction: remove some independent while minor dimension
+2. visualization: 3 dimensions are the maximum that we could draw on the diagram
+3. feature extraction: remove som non-independent dimensions without losing dynamics
