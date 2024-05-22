@@ -153,3 +153,4 @@ if __name__ == "__main__":
 6. [What is the difference between type and type.__new__ in python?](https://stackoverflow.com/questions/2608708/what-is-the-difference-between-type-and-type-new-in-python)
 7. [Python Metaclass : Understanding the 'with_metaclass()'](https://stackoverflow.com/questions/18513821/python-metaclass-understanding-the-with-metaclass)
 8. [Cross-Python metaclasses](https://www.zopatista.com/python/2014/03/14/cross-python-metaclasses/)
+9. [Metaclasses in Python](https://www.youtube.com/watch?v=yWzMiaqnpkI)
