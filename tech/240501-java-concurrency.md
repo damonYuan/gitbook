@@ -41,7 +41,7 @@ Java Concurrency in Practice
    - don't share it
    - make it immutable
    - use proper synchronization mechanism whenever it's being accessed
-3. Is a thread-safe program one that is constructed en- tirely of thread-safe classes? Not necessarily—a program that consists entirely of thread-safe classes may not be thread-safe, and a thread-safe program may con- tain classes that are not thread-safe.
+3. Is a thread-safe program one that is constructed entirely of thread-safe classes? Not necessarily—a program that consists entirely of thread-safe classes may not be thread-safe, and a thread-safe program may contain classes that are not thread-safe.
 4. a class is thread-safe when it continues to behave correctly when accessed from multiple threads.
 5. Stateless objects are always thread-safe.
 ### 2.2 atomicity
@@ -58,3 +58,11 @@ Java Concurrency in Practice
 4. A common locking convention is to encapsulate all mutable state within an object and to protect it from concurrent access by synchronizing any code path that accesses mutable state using the object’s intrinsic lock. This pattern is used by many thread-safe classes, such as Vector and other synchronized collection classes.
 5. For every invariant that involves more than one variable, all the variables involved in that invariant must be guarded by the same lock.
 ### 2.5 Liveness and performance
+
+## Sharing Objects
+
+### Visibility
+### Publication and escape
+### Thread confinement
+### Immutability
+### Safe publication
