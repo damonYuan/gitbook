@@ -12,22 +12,22 @@ void testStatisticUtil() {
 }
 ```
 
-the assertion will succeed. We know that mathematically only when input is positive infinite, will the cumulative probability be 1, but why here when `9.0`, which is far from positive infinite, is entered, 1 is returned? 
+the assertion will succeed. We know that mathematically only when input is positive infinite, will the cumulative probability be `1`, but why here when `9.0`, which is far from positive infinite, is entered, `1` is returned? 
 
 The root cause is the floating number issue.
 
 ![Floating Issue](../.gitbook/assets/floating-issue.png "Floating Issue")
 
-In Java, the double data type is a 64-bit floating-point number, which means it can represent a very wide range of values, from around 4.9e-324 to 1.8e+308. However, this wide range comes with a trade-off in precision. The double data type can only represent a finite set of decimal values exactly, and some decimal values, like 0.1, cannot be represented exactly.
+In Java, the double data type is a 64-bit floating-point number, which means it can represent a very wide range of values, from around `4.9e-324` to `1.8e+308`. However, this wide range comes with a trade-off in precision. The double data type can only represent a finite set of decimal values exactly, and some decimal values, like `0.1`, cannot be represented exactly.
 
-When the value of a double is as small as 1E-19, it is at the very limits of the precision that the double data type can represent. Due to rounding errors and the way floating-point arithmetic works, the actual value stored in the double variable may be slightly different from the value you expect.
+When the value of a double is as small as `1E-19`, it is at the very limits of the precision that the double data type can represent. Due to rounding errors and the way floating-point arithmetic works, the actual value stored in the double variable may be slightly different from the value you expect.
 
 For example, consider the following code:
 ```
 double x = 1E-19;
 System.out.println(1 - x); // Output: 1.0
 ```
-Even though the value of x is 1E-19, when you subtract it from 1, the result is still 1.0. This is because the difference between 1 and 1E-19 is so small that it falls within the rounding error of the double data type.
+Even though the value of x is `1E-19`, when you subtract it from `1.0`, the result is still `1.0`. This is because the difference between `1.0` and `1E-19` is so small that it falls within the rounding error of the double data type.
 
 ## Formula
 
@@ -39,8 +39,8 @@ $$
 
 where,
 - Sign Bit (1 bit): `0` for positive and `1` for negative
-- Exponent Bits (11 bits): The value of the exponent field is the actual exponent plus a bias of 1023
-- Mantissa Bits (52 bits): The mantissa represents the fractional part of the number, with an implied leading 1
+- Exponent Bits (11 bits): The value of the exponent field is the actual exponent plus a bias of `1023`
+- Mantissa Bits (52 bits): The mantissa represents the fractional part of the number, with an implied leading `1`
 
 ## Example
 
@@ -60,7 +60,7 @@ Note that the mantissa component itself is limited to 52 bits, giving it the abi
 
 Then `1E0 - 1E-19` results in
 
-`0 01111111111 0000000000000000000000000000000000000000000000000000` because Mantissa (52 bits) of `1E-19` shifted 64 bits to the right will result in 0.
+`0 01111111111 0000000000000000000000000000000000000000000000000000` because Mantissa (52 bits) of `1E-19` shifted 64 bits to the right will result in `0`.
 
 ## Reference
 

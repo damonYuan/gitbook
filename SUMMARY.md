@@ -4,6 +4,7 @@
 
 ## 💻 Tech
 
+* [Floating-point Arithmetic](tech/240527-floating-issue.md)
 * [Interesting Bitwise Operation](tech/231116-interesting-bitwise.md)
 * [Python Metaclass](tech/231113-python-meta-programming.md)
 * [Memory Order](tech/231008-memory-order.md)
