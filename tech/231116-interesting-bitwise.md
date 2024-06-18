@@ -47,4 +47,6 @@ A RingBuffer has a head and a tail pointer to identify the reading and writing p
 
 We know the overflow property of the computer's complement: when an unsigned number overflows upwards, it becomes 0. We can use this property to limit tail/head, but the problem with using it directly is that the capacity can only be 2^8/16/32/64.
 
+## mod
 
+n mod m = n & (m-1), 600 times faster than mod operation.
