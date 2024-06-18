@@ -8,5 +8,4 @@
 ## A Learning A Day
 
 - 2014
-  - June
-    - 18: [What is move semantics?](https://stackoverflow.com/questions/3106110/what-is-move-semantics)
+  - 18 June: [What is move semantics?](https://stackoverflow.com/questions/3106110/what-is-move-semantics)
