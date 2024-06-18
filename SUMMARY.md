@@ -28,7 +28,6 @@
 ## 💲 Trading
 
 * [Quant Questions](trading/240229-quant-questions.md)
-* [凯利公式](trading/230719-kelly-formula.md)
 
 ## 📘 Product
 
