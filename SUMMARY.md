@@ -32,4 +32,3 @@
 ## 📘 Product
 
 * [Making a Trading System from Scratch](product/240229-trading-system-from-scratch.md)
-* [功能需求模版 FRD Template](product/211225-frd-template.md)
