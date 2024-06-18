@@ -1,6 +1,7 @@
 Java Concurrency in Practice
 ====
 
+```
 @startmindmap
 * Java Concurrency in Practice
 
@@ -35,3 +36,4 @@ Java Concurrency in Practice
 ****_ Immutability
 ****_ Safe Publication
 @endmindmap
+```
