@@ -8,6 +8,7 @@
 ## A Learning A Day
 
 - 2024
+  - 21 Jun.: [Kiss Linux](https://kisslinux.github.io/)
   - 20 Jun.: [Story: Redis and its creator antirez](https://blog.brachiosoft.com/en/posts/redis/)
   - 19 Jun.: [User-space RCU: Memory-barrier menagerie](https://lwn.net/Articles/573436/#Quick%20Quiz%202)
     > The truth is that pairs of memory barriers provide conditional ordering guarantees.
