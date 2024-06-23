@@ -8,6 +8,8 @@
 ## A Learning A Day
 
 - 2024
+  - 23 Jun.: [An Introduction to Lock-Free Programming](https://preshing.com/20120612/an-introduction-to-lock-free-programming/)
+    > Sequential consistency means that all threads agree on the order in which memory operations occurred, and that order is consistent with the order of operations in the program source code. 
   - 21 Jun.: [Kiss Linux](https://kisslinux.github.io/)
   - 20 Jun.: [Story: Redis and its creator antirez](https://blog.brachiosoft.com/en/posts/redis/)
   - 19 Jun.: [User-space RCU: Memory-barrier menagerie](https://lwn.net/Articles/573436/#Quick%20Quiz%202)
