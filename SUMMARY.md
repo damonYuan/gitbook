@@ -6,7 +6,6 @@
 
 * [Floating-point Arithmetic](tech/240527-floating-issue.md)
 * [Interesting Bitwise Operation](tech/231116-interesting-bitwise.md)
-* [Java Concurrency in Practice](tech/240501-java-concurrency.md)
 * [Python Metaclass](tech/231113-python-meta-programming.md)
 * [Memory Order](tech/231008-memory-order.md)
 * [Grind 75](tech/230930-grind-75.md)
