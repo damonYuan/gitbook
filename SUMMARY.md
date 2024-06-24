@@ -27,7 +27,3 @@
 ## 💲 Trading
 
 * [Quant Questions](trading/240229-quant-questions.md)
-
-## 📘 Product
-
-* [Making a Trading System from Scratch](product/240229-trading-system-from-scratch.md)
