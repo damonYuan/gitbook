@@ -10,7 +10,7 @@
 * [Memory Order](tech/231008-memory-order.md)
 * [Grind 75](tech/230930-grind-75.md)
 * [Kaggle](tech/240312-kaggle.md)
-* [典型的领域驱动设计应用架构](tech/220501-ddd-architecture.md)
+* [Typical Domain Driven Design Application Architecture](tech/220501-ddd-architecture.md)
 * [How to Deploy Applications in Linux Properly](tech/220117-deploy-app-in-linux.md)
 * [Design Patterns with Java Examples](tech/210718-design-patterns.md)
 * [Tools for Reliability](tech/201007-tools-for-reliability.md)

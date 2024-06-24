@@ -1,10 +1,10 @@
-# 典型的领域驱动设计应用架构
+# Typical Domain Driven Design Application Architecture
 
-本篇主要是对典型的领域驱动设计 (Domain Driven Design) 应用架构的理解和使用经验的总结。
+This article summarizes the understanding and experience of using a typical Domain Driven Design application architecture.
 
-## 领域模型的项目结构
+## Project Architecture for Domain Modeling
 
-一个基于 DDD 设计模式的 SpringBoot [项目结构](https://github.com/damonYuan/ddd_example) 通常划分如下
+A SpringBoot [project structure](https://github.com/damonYuan/ddd_example) based on the DDD design pattern is typically divided as follows
 
 ```
 .
@@ -63,29 +63,29 @@
                         └── DddApplicationTests.java
 ```
 
-其中
+where
 
-- config: 所有 SpringBoot 的配置文件都放置在这里
-- controller: 所有项目的 API 入口 controller 文件
-- dao: Data Access Object，在一些项目 (如 Hibernate) 中也可以叫 repository。这里的类负责处理向数据库，其他 API 或者文件系统增删改查数据
-- domain: 从数据库的角度可以比较好理解，一个 domain 类一般代表数据库中的一张表，有着数据库表结构中相对应的字段
-- service: 该目录中存储了所有 Service 的 Interface。服务是业务逻辑处理的地方，通过 Interface 对业务逻辑的定义和实现进行解耦是进行单元测试的前提
-- service/dto: 有的时候 controller 定义的 API 返回的值不一定就恰好是 domain 代表的数据，它可能是多个 domain 的集合。这种情况就需要有一个 Data Transfer Object 对数据进行集合和变换以满足前端需求
-- service/impl: 该目录下的类为 Service interfaces 的实现
-- utils: 该目录下为工具类，一般只应该包含静态方法
+- config: All SpringBoot configuration files are placed here.
+- controller: the API entry controller file for all projects
+- dao: Data Access Object, also called repository in some projects (e.g. Hibernate), where classes are responsible for processing data additions, deletions, modifications, and queries to the database, other APIs, or the file system.
+- domain: from the database point of view can be better understood, a domain class generally represents a table in the database, with the corresponding fields in the database table structure.
+- service: This directory stores the Interface of all services, which is the place where business logic is processed, and decoupling the definition and implementation of business logic through the Interface is a prerequisite for unit testing.
+- service/dto: Sometimes the value returned by the API defined by the controller may not be exactly the data represented by the domain, it may be a collection of multiple domains. In this case, a Data Transfer Object is needed to aggregate and transform the data to meet the front-end requirements.
+- service/impl: the classes in this directory are implementations of service interfaces.
+- utils: This directory contains utility classes, which should generally only contain static methods.
 
-## 领域模型的 4 种模式
+## 4 patterns of the domain model
 
-[领域设计模式（Domain Driven Design）](https://martinfowler.com/tags/domain%20driven%20design.html) 是由 Martin Fowler 提出的一种设计模式，其模型一般可以分为4大类：
+[Domain Driven Design](https://martinfowler.com/tags/domain%20driven%20design.html) is a design pattern proposed by Martin Fowler, and its models can be divided into 4 major categories:
 
-1. 失血模式: 简单来说，就是 Domain Object 只有属性的getter/setter方法的纯数据类，所有的业务逻辑完全由 Service 完成
-2. 贫血模式 ([Anemia Domain Model](https://martinfowler.com/bliki/AnemicDomainModel.html)) : 简单来说，就是 Domain Object 包含了不依赖于持久化的领域逻辑，而那些依赖持久化的领域逻辑 (与 DAO 层打交道的逻辑) 被分离到 Service 层
-3. 充血模式: 充血模型和第二种模型差不多，所不同的就是如何划分业务逻辑，即认为，绝大多业务逻辑都应该被放在 Domain Object 里面(包括持久化逻辑)，而 Service 层应该是很薄的一层，仅仅封装事务和少量逻辑，不和 DAO 层打交道
-4. 胀血模式: 取消 Service 层，只剩下 Domain Object 和 DAO 两层，在 Domain Object 上面封装事务
+1. blood loss pattern: Simply put, that is, the Domain Object only attributes of the getter/setter method of the pure data class, all the business logic is completely completed by Service
+2. Anemia Model ([Anemia Domain Model](https://martinfowler.com/bliki/AnemicDomainModel.html)): Simply put, the Domain Object contains domain logic that does not depend on persistence, while those that do depend on persistence are not. logic (that deals with the DAO layer) is separated to the Service layer.
+3. engorgement model: the engorgement model is similar to the second model, the difference is how to divide the business logic, i.e., it is believed that most of the business logic should be placed inside the Domain Object (including persistence logic), and the Service layer should be a very thin layer, only encapsulating transactions and a small amount of logic, and do not deal with the DAO layer
+4. Bloat mode: Eliminate the Service layer, leaving only the Domain Object and DAO layers, and encapsulate transactions on top of the Domain Object.
 
-### 失血模式
+### Blood loss mode
 
-这种模式下 Domain Object 就只是数据库表在 POJO (Plain Old Java Object) 上的一个映射。
+In this mode, the Domain Object is just a mapping of database tables to POJOs (Plain Old Java Objects).
 
   ```
   Controller -> Service (domain logic) -> DAO -> Domain
@@ -93,92 +93,93 @@
                     └------------------------------|
   ```
 
-优点:
+Pros.
 
-- 简单。所有业务逻辑都在 Service 层实现，Service 通过调用 DAO 中的方法对 Domain 所代表的数据进行存取
+- Simple. All business logic is implemented at the Service layer, and the Service accesses the data represented by the Domain by calling methods in the DAO.
 
-缺点:
+Cons: Anti-OOP.
 
-- anti-OOP。按照 Object-Oriented Programming 的理念，一个 Object 应该包括它所代表的事物的方法。比如 `Cat` 类所生成的一个实例 `cat` 应该有 `meow()` 这个方法，而不应该把 `meow()` 这个方法放到 `CatService` 里去
+- Anti-OOP: According to the concept of Object-Oriented Programming, an Object should include the methods of the thing it represents. For example, an instance of `cat` generated by the `Cat` class should have the method `meow()`, and should not put the method `meow()` into `CatService`.
 
-### 贫血模式 ([Anemia Domain Model](https://martinfowler.com/bliki/AnemicDomainModel.html))
+### Anemia Domain Model ([Anemia Domain Model](https://martinfowler.com/bliki/AnemicDomainModel.html))
 
-这种模式和上面失血模式最重要的区别是 Domain Object 和 Service Implementation 中都包含了领域逻辑，其划分标准是
+The most important difference between this model and the Anemia model above is that both the Domain Object and the Service Implementation contain domain logic, which is classified by the following criteria
 
-- 依赖于持久化（换一种说法就是需要通过 DAO 向数据库读写数据）的领域逻辑分离到 Service 层
-- 不依赖于持久化的领域逻辑包含在 Domain 中
+- Domain logic that depends on persistence (in other words, needs to read and write data to the database through the DAO) is separated into the Service tier
+- Domain logic that does not depend on persistence is contained in the Domain
 
-Martin Fowler一直主张该模型。
+This model has been advocated by Martin Fowler.
 
-优点:
+Pros.
 
-- 各层单向依赖，结构清楚，易于实现和维护
+- Unidirectional dependencies between layers, clear structure, easy to implement and maintain.
+
   ```
   Controller -> Service (persistence-releted domain logic) -> DAO -> Domain (non-persistence-related domain logic)
                   |                                                    ^
                   └─---------------------------------------------------| 
   ```
-- 设计简单易行，底层模型非常稳定
+- Simple and easy to design, the underlying model is very stable
 
-缺点:
+Disadvantages.
 
-- 比较紧密依赖的持久化 Domain Logic 被分离到 Service 层，显得不够 Object-Oriented
-- Service 层过于厚重
+- The more tightly dependent persistence Domain Logic is separated into the Service layer, which is not Object-Oriented enough.
+- Service layer is too heavy
 
-### 充血模式
+### Engorgement Model
 
-充血模型和第二种模型差不多，所不同的就是如何划分业务逻辑，即认为，绝大多业务逻辑都应该被放在 Domain Object 里面(包括持久化逻辑)，而 Service 层应该是很薄的一层，仅仅封装事务和少量逻辑，不和DAO层打交道。
+The congestion model is similar to the second model, but the difference is how the business logic is divided, i.e., it is believed that most of the business logic should be placed inside the Domain Object (including the persistence logic), and the Service layer should be a very thin layer, encapsulating only the transaction and a small amount of logic, and not dealing with the DAO layer.
 
   ```
   Controller -> Service -> Domain (domain logic) <--> DAO
   ```
 
-优点:
+Pros.
 
-- 更加符合 OO 的原则
-- Service 层很薄，只充当 Facade 的角色，不和 DAO 打交道
+- More in line with OO principles
+- Service layer is very thin, acts as a facade and doesn't deal with DAOs.
 
-缺点:
+Disadvantages.
 
-- DAO 和 Domain Object 形成了双向依赖，复杂的双向依赖会导致很多潜在的问题
-- 如何划分 Service 层逻辑和 Domain 层逻辑是非常含混的，在实际项目中，由于设计和开发人员的水平差异，可能导致整个结构的混乱无序
-- 考虑到 Service 层的事务封装特性，Service 层必须对所有的 Domain Object 的逻辑提供相应的事务封装方法，其结果就是 Service 完全重定义一遍所有的 domain logic，非常烦琐，使得和贫血模型没有什么区别了
+- DAO and Domain Object form a two-way dependency, and the complexity of this two-way dependency can lead to many potential problems.
+- How to divide Service layer logic and Domain layer logic is very ambiguous, and in real projects, due to differences in design and developer level, it may lead to confusion and disorder in the whole structure.
+- Considering the transaction encapsulation feature of the Service layer, the Service layer must provide corresponding transaction encapsulation methods for all Domain Object logic, and as a result, the Service layer has to completely redefine all the domain logic, which is very cumbersome and makes no difference to the anemia model.
 
-### 胀血模式
+### Bloated blood model
 
-取消 Service 层，只剩下 Domain Object 和 DAO 两层，在 Domain Object 上面封装事务。
+Eliminate the Service layer, leaving only the Domain Object and DAO layers, and encapsulate transactions on top of the Domain Object.
 
   ```
   Controller -> Domain (domain logic) <--> DAO
   ```
 
-Ruby on Rails 就是这种模式，甚至 Domain 和 DAO 也直接合并了，但是这一部分是由 Ruby 这门语言决定的。 Ruby 的动态 metaprogramming 特性和 module 之间的继承关系在编译器的层面上实现了逻辑分层， AOP 和 Dependency Injection，从而使得 Unit Test 中所依赖的 mock & stub 手段不需要通过设计模式中的分层和 Java 中的 interface 来实现。
+Ruby on Rails is this model, and even Domain and DAO are directly merged, but this is partly due to Ruby as a language. Ruby's dynamic metaprogramming features and inheritance between modules enable logical layering, AOP, and Dependency Injection at the compiler level, so that the mock & stub handles that Unit Tests rely on don't need to be implemented through the layering of design patterns and the interface of Java. interface in Java.
 
-在 Java 项目中，其优点是:
+In a Java project, the advantages are: - Simplified Layering
 
-- 简化了分层
-- 比较符合 OO
+- Simplified layering
+- More consistent with OO
 
-缺点:
+Disadvantages.
 
-- 很多不是 domain logic 的 Service 逻辑也被强行放入 Domain Object ，引起了 Domain Object 模型的不稳定
-- Domain Object 暴露给 controller 层过多的信息，可能引起意想不到的副作用
+- A lot of service logic that is not domain logic is forced into the Domain Object, causing instability in the Domain Object model.
+- The Domain Object exposes too much information to the controller layer, which may cause unexpected side effects.
 
 ## Controller vs Service
 
-什么应该放在 Controller 里呢，一般标准如下：
+The general criteria for what should be placed in a Controller are as follows. 1:
 
-1. API endpoints exposure 应该放在 Controller 里
-2. 安全相关逻辑，比如 param filter, user authentication & authorization 应放在 Controller 里
-3. Request 中的收到数据的校验应该放在 Controller 里
-4. 下一步 Controller 应该调用 Service 方法并传入参数，获取 dto response 回复给前端
+1. API endpoints exposure should be placed in the Controller. 2.
+2. security-related logic, such as param filter, user authentication & authorization, should be placed in the Controller.
+3. the validation of received data in the Request should be placed in the Controller
+4. Next, the Controller should call the Service method and pass in the parameters to get the dto response back to the front-end.
 
-## 经验总结
+## Lessons Learned
 
-在这四种模型当中，失血模型和胀血模型应该是不被提倡的。而贫血模型和充血模型从技术上来说，都已经是可行的了。但是我个人仍然主张使用贫血模型。其理由：
+Among these four models, the blood loss model and the blood swelling model should not be advocated. The anemia model and the congestion model are technically feasible. But I personally still advocate the use of the anemia model. The reasons:
 
-1. 参考充血模型第三个缺点，Service 层只是 Domain 层的一个映射，已经没有太大意义了，反而增加了工作量（在 Domain 中定义好了的一个 domain logic 在 Service 层需要再包装一遍）
-2. 参考充血模型第三个缺点，不同的 Services 的逻辑集中在一个 Domain 中，必然使得 Domain 及其厚重
-3. domain object和DAO的双向依赖在做大项目中，考虑到团队成员的水平差异，很容易引入不可预知的潜在bug
-4. 如何划分 domain logic 和 service logic 的标准是不确定的，往往要根据个人经验，有些人就是觉得某个业务他更加贴近 domain，也有人认为这个业务是贴近 service 的。由于划分标准的不确定性，带来的后果就是实际项目中会产生很多这样的争议和纠纷，不同的人会有不同的划分方法，最后就会造成整个项目的逻辑分层混乱。这不像贫血模型中我提出的按照是否依赖持久化进行划分，这种标准是非常确定的，不会引起争议，因此团队开发中，不会产生此类问题
-5. 贫血模型的 domain object 确实不够 rich，但是我们是做项目，不是做研究，好用就行了，管它是不是那么纯的 OO 呢？
+1. the third disadvantage of the congestive model is that the Service layer is just a mapping of the Domain layer, which is no longer meaningful, but increases the workload (a domain logic defined in the Domain needs to be packaged again in the Service layer)
+2. the third disadvantage of the reference congestion model, the logic of different Services is concentrated in a Domain, which inevitably makes the Domain and its heavy weight
+3. the bidirectional dependency between domain object and DAO in a large project, considering the level difference of the team members, it is easy to introduce unpredictable potential bugs.
+4. The standard of how to divide domain logic and service logic is uncertain, often based on personal experience, some people just think that a certain business is closer to the domain, and some people think that this business is close to the service. Due to the uncertainty of the delineation standard, the consequence is that there will be a lot of disputes and disputes in the actual project. Different people will have different delineation methods, which will finally cause the logic layering of the whole project to be chaotic. This is not like the anemia model I proposed according to whether to rely on persistence for the division, this standard is very certain, will not cause controversy, so the team development, will not produce such problems!
+5. anemia model of the domain object is indeed not rich enough, but we are doing the project, not to do research, good to use on the line, regardless of whether it is so pure OO it?
