@@ -9,7 +9,6 @@
 * [Python Metaclass](tech/231113-python-meta-programming.md)
 * [Memory Order](tech/231008-memory-order.md)
 * [Grind 75](tech/230930-grind-75.md)
-* [Kaggle](tech/240312-kaggle.md)
 * [Typical Domain Driven Design Application Architecture](tech/220501-ddd-architecture.md)
 * [How to Deploy Applications in Linux Properly](tech/220117-deploy-app-in-linux.md)
 * [Design Patterns with Java Examples](tech/210718-design-patterns.md)
