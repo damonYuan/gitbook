@@ -8,6 +8,7 @@
 ## A Learning A Day
 
 - 2024
+  - 24 Jun.: [mintomic](http://mintomic.github.io/lock-free/memory-fences/)
   - 23 Jun.: [An Introduction to Lock-Free Programming](https://preshing.com/20120612/an-introduction-to-lock-free-programming/)
     > Sequential consistency means that all threads agree on the order in which memory operations occurred, and that order is consistent with the order of operations in the program source code. 
   - 21 Jun.: [Kiss Linux](https://kisslinux.github.io/)
