@@ -49,4 +49,4 @@ We know the overflow property of the computer's complement: when an unsigned num
 
 ## mod
 
-n mod m = n & (m-1), 600 times faster than mod operation.
+n mod 2^k = n & (2^k-1), 600 times faster than mod operation.
