@@ -1,4 +1,4 @@
-# Typical Domain Driven Design Application Architecture
+# Typical Domain Driven Design Architecture
 
 This article summarizes the understanding and experience of using a typical Domain Driven Design application architecture.
 
