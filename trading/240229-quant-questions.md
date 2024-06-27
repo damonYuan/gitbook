@@ -1,6 +1,6 @@
 # Quant Questions
 
-## Q1: Option Arbitrage Opportunity 
+## 1 
 > Nine months call options with strikes 20 and 25 on a non-dividend-paying underlying asset with spot price $22 are trading for $5.5 and $1, respectively. Can you find an arbitrage?
 
 Note that a call option with strike 0 on a non-dividend-paying underlying asset is the same as one unit of the asset, since the call with strike 0 will always be exercised at maturity by paying $0, i.e., the strike of the option, to receive one unit of the asset. Thus, we are implicitly given a third call option with strike K = 0 and price $22 (i.e., the spot price of the asset), and we can proceed to identify whether there is convexity arbitrage for these three call options.
@@ -65,7 +65,7 @@ $$
 
 Note that $$150 = 500 \cdot (5.50 - 5.20)$$, i.e., the risk-free profit $150 is equal to the size of the convexity disparity $5.50 - $5.20 times the amplifier factor 500.
 
-## Q2: Eigenvalues
+## 2
 > (i) What is the sum of the eigenvalues of the correlation matrix of n random variables?
 > 
 > (ii) Find a lower bound for the sum of the eigenvalues of the inverse of a nonsingular correlation matrix of n random variables.
@@ -84,3 +84,16 @@ Note that the only terms of order $$n-1$$ from $$det(tI -A)$$ are obtained by mu
 Since the correlation matrix of n random variable s is an nxn matrix with all main diagonal entries equal to 1, the trace of the correlation matrix is equal to n.
 
 We conclude that the sum of the eigenvalues of the correlation matrix of n random variable is n.
+
+## 3
+> Let $$W_{t}$$ be a Wiener process, and let
+> 
+$$
+\begin{aligned}
+X_{t} = \int_{0}^{t}W_{\tau}d{\tau}.
+\end{aligned}
+$$
+> 
+> What is the distribution of $$X_{t}$$? Is $$X_{t}$$ a martingale?
+
+

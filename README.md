@@ -10,6 +10,7 @@
 - 2024
   - 27 Jun.: [Memory Barriers Are Like Source Control Operations](https://preshing.com/20120710/memory-barriers-are-like-source-control-operations/)
     > Types of Memory Barrier: LoadLoad, StoreStore, LoadStore, StoreLoad
+  - 26 Jun.: [Memory Reordering Caught in the Act](https://preshing.com/20120515/memory-reordering-caught-in-the-act/)
   - 24 Jun.: [mintomic](http://mintomic.github.io/lock-free/memory-fences/)
   - 23 Jun.: [An Introduction to Lock-Free Programming](https://preshing.com/20120612/an-introduction-to-lock-free-programming/)
     > Sequential consistency means that all threads agree on the order in which memory operations occurred, and that order is consistent with the order of operations in the program source code. 
