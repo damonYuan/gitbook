@@ -8,6 +8,10 @@
 ## A Learning A Day
 
 - 2024
+  - 02 Jul.: [An Interactive Intro to CRDTs](https://jakelazaroff.com/words/an-interactive-intro-to-crdts/) and [Building a collaborative text editor in Go](https://databases.systems/posts/collaborative-editor)
+    > CRDT stands for “Conflict-free Replicated Data Type”. 
+    > It’s a kind of data structure that can be stored on different computers (peers). Each peer can update its own state instantly, without a network request to check with other peers. 
+    > Peers may have different states at different points in time, but are guaranteed to eventually converge on a single agreed-upon state. That makes CRDTs great for building rich collaborative apps, like Google Docs and Figma — without requiring a central server to sync changes.
   - 28 Jun.: [Acquire and Release Semantics](https://preshing.com/20120913/acquire-and-release-semantics/)
     > Acquire semantics -> LoadLoad + LoadStore
     > Release semantics -> LoadStore + StoreStore 
